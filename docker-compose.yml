@@ -12,7 +12,6 @@ services:
       - ./.env.dev
     depends_on:
       - db
-
   db:
     image: postgres:15
     volumes:
@@ -21,6 +20,12 @@ services:
       - POSTGRES_USER=hello_django
       - POSTGRES_PASSWORD=hello_django
       - POSTGRES_DB=hello_django_dev      
+  nginx:
+    build: ./nginx
+    ports:
+      - 1337:80
+  depends_on:
+      - web
 
 volumes:
   postgres_data:

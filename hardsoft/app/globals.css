@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-polySans), sans-serif;
+}
+
+/* Slide Animation CSS */
+@keyframes slide-in {
+  from {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  from {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.5;
+  }
+  to {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s ease-out forwards;
+}
+
+.animate-slide-out {
+  animation: slide-out 0.5s ease-out forwards;
+}
+
+
+
+/*################ Progression color gradient ###############*/
+
+@keyframes gradientProgress {
+  0% {
+      height: 0%;
+  }
+  100% {
+      height: 100%;
+  }
+}
+
+.animate-gradient-progress {
+  animation: gradientProgress 1s forwards ease-in-out;
+}
+
+.progress-bar-1 {
+  animation-delay: 0s;
+}
+
+.progress-bar-2 {
+  animation-delay: 0.5s;
+}
+
+.progress-bar-3 {
+  animation-delay: 1s;
+}
+
+.progress-bar-4 {
+  animation-delay: 1.5s;
+}
+
+/* Optionnel : Ajouter une transition pour un effet plus fluide */
+.progress-bar {
+  transition: height 0.3s ease-out;
+}
+
+
+
+
+/*######################## Slide Animation CSS ###########################*/
+
+@keyframes slide-in {
+  from {
+      transform: translateY(100%);
+      opacity: 0; /* L'élément est invisible en bas */
+  }
+  50% {
+      opacity: 1; /* L'élément devient visible progressivement */
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1; /* L'élément est totalement visible en position finale */
+  }
+}
+
+@keyframes slide-out {
+  from {
+      transform: translateY(0);
+      opacity: 1; /* L'élément commence visible */
+  }
+  50% {
+      opacity: 0.5; /* L'élément devient semi-transparent à mi-parcours */
+  }
+  to {
+      transform: translateY(-100%);
+      opacity: 0; /* L'élément est complètement invisible en haut */
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s ease-out forwards;
+}
+
+.animate-slide-out {
+  animation: slide-out 0.5s ease-out forwards;
+}
+
+/* Point dans les spans du slider CSS */
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+/* Style du point rond à l'intérieur des boutons */
+.button.active::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: white; /* Point rond blanc */
+  transition: background-color 0.3s ease;
+}

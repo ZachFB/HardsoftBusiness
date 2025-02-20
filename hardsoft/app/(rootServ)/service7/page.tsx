@@ -1,5 +1,5 @@
 import ProgressGradient from "@/app/components/progressGradient";
-import SliderServ from "@/app/components/service7/slider";
+import SliderServ from "@/app/components/Service7/slider";
 import Image from "next/image";
 
 

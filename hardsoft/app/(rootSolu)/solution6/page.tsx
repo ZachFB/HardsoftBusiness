@@ -282,7 +282,7 @@ const page = () => {
             </div>
 
 
-            <div className="h-auto w-full pt-[40px] space-y-10">
+            <div className="h-auto w-full pt-[40px] space-y-10 mb-32">
 
                 <div className="w-full flex justify-center">
                     <div className="w-full lg:w-[1200px] h-[300px] flex items-center">

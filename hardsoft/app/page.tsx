@@ -386,7 +386,12 @@ export default function Home() {
             <h3 className="text-[16px]">Contactez-nous ou appelez directement notre service client au 01 89 19 86 47, disponible du lundi au vendredi de 9h à 17h.</h3>
             <p className="text-[12px]">Vos données à caractère personnel sont collectées et traitées par Bpifrance en qualité de responsable de traitement dans le cadre du présent formulaire. En savoir plus sur la protection des données personnelles..</p>
           </div>
-          <button className="text-[16px] w-[225px] text-black bg-[#00FFFF] p-4 rounded-[60px]">Nous contactez</button>
+          <button className="p-4 w-[225px] rounded-[40px] hover:font-extrabold text-xl border hover:border-transparent border-black relative overflow-hidden group">
+            <span className="relative z-10 transition-colors duration-300 group-hover:text-black">
+              Nous contactez
+            </span>
+            <div className="absolute inset-0 w-0 bg-[#11EEFF] transition-all duration-300 group-hover:w-full"></div>
+          </button>
         </div>
 
         <div>

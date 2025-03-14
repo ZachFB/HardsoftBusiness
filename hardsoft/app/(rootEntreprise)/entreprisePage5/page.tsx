@@ -22,7 +22,7 @@ const page = () => {
 
                 {/* <!-- Image --> */}
                 <div className="w-full md:w-[80%] lg:w-[45%] lg:ml-20 h-[250px] md:h-[350px] lg:h-[494px] rounded-[15px] bg-cover bg-center"
-                    style={{ backgroundImage: `url(/images/heroEntreprise4.png)` }}></div>
+                    style={{ backgroundImage: `url(/images/heroEntreprise5.png)` }}></div>
             </div>
 
 

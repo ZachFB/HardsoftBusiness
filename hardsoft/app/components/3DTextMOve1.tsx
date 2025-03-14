@@ -1,42 +1,83 @@
 "use client";
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-
 
 gsap.registerPlugin(useGSAP);
 
 export default function Text3DAnimation() {
-  const helloRef = useRef(null); // Référence pour le mot "Hello"
+  const textRef = useRef(null); // Référence pour le conteneur du synonyme
+  const leftTextRef = useRef(null); // Référence pour le texte à gauche ("Administration")
+  const rightTextRef = useRef(null); // Référence pour le texte à droite ("- Legal & Finance")
+  const [currentWord, setCurrentWord] = useState("Recruting"); // État pour le mot actuel
+
+  // Tableau des synonymes avec leurs classes de couleur Tailwind
+  const synonyms = [
+    { word: "Hiring"},
+    { word: "Recruitment"},
+    { word: "Staffing"},
+    { word: "Employing"},
+    { word: "Engagement"},
+  ];
 
   useGSAP(() => {
-    // Animation GSAP
-    gsap.to(helloRef.current, {
-      rotationY: 180, // Rotation complète en 3D sur l'axe Y
-      duration: 5,    // Durée de l'animation (5 secondes)
-      ease: 'power2.inOut', // Courbe d'accélération/décélération
-      repeat: -1,      // Répéter l'animation à l'infini
-      repeatDelay: 1, // Délai avant de répéter l'animation (2 secondes)
-      delay: 1,       // Délai avant de démarrer l'animation (2 secondes)
-      yoyo: true,     // Revenir à l'état initial après chaque cycle
-    });
+    let currentIndex = 0;
+
+    const changeWord = () => {
+      const nextWord = synonyms[currentIndex].word;
+      const currentWidth = textRef.current.offsetWidth; // Largeur actuelle du synonyme
+      const nextWidth = nextWord.length * 10; // Estimation de la largeur du prochain synonyme
+
+      // Déterminer la direction du déplacement
+      const direction = nextWidth > currentWidth ? 10 : -10;
+
+      // Animation pour déplacer l'expression et le synonyme
+      gsap.to([rightTextRef.current, textRef.current], {
+        x: direction, // Déplacer dans la même direction
+        duration: 0.3,
+        ease: "power2.inOut",
+        onComplete: () => {
+          // Changer le mot après le déplacement
+          setCurrentWord(nextWord);
+          currentIndex = (currentIndex + 1) % synonyms.length; // Passer au mot suivant
+
+          // Animation pour revenir à la position d'origine
+          gsap.to([rightTextRef.current, textRef.current], {
+            x: 0,
+            duration: 0.5,
+            ease: "power2.inOut",
+          });
+        },
+      });
+    };
+
+    // Changer le mot toutes les 3 secondes
+    const interval = setInterval(changeWord, 5000);
+
+    // Nettoyer l'intervalle lors du démontage du composant
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className='z-30'>
-      <h1
-       className='text-[38px] lg:text-[52px]' 
-      >
-        Administration <span
-          ref={helloRef}
+    <div className='z-30 text-[#06060c]'>
+      <h1 className='text-[28px] lg:text-[52px]'>
+        <span ref={leftTextRef} className="inline-block">
+          Administration{" "}
+        </span>
+        <span
+          ref={textRef}
+          className={`transition-colors duration-500 inline-block pl-3 z-30 font-semibold`} // Appliquer la couleur dynamique
           style={{
-            display: 'inline-block', // Nécessaire pour les transformations 3D
-            transformStyle: 'preserve-3d', // Active les transformations 3D
+            transformStyle: 'preserve-3d',
           }}
         >
-           Recruting
-        </span> - Legal & Finance
+          {currentWord}
+        </span>
+        <span ref={rightTextRef} className="inline-block z-10">
+          {" "}
+          - Legal & Finance
+        </span>
       </h1>
     </div>
   );

@@ -12,6 +12,8 @@ const Navbar: React.FC = () => {
   const [megaserv, setMegaserv] = useState(false);
   const [megasolut, setMegasolut] = useState(false);
   const [megaIndu, setMegaIndu] = useState(false);
+  const [megacarr, setMegaCarr] = useState(false);
+  const [megacomp, setMegaComp] = useState(false);
 
   //Comportement 
   const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
@@ -50,37 +52,52 @@ const Navbar: React.FC = () => {
             {['Produits', 'Services', 'Solutions', 'Industries', 'Carrieres', 'Entreprise'].map((item) => (
               <li key={item} className="text-[#494949] text-[16px] hover:text-[#0000FF] cursor-pointer" onClick={
                 () => {
-                  if (item === "Produits") { setMegaprod(true); setMegaserv(false); setMegasolut(false); setMegaIndu(false) }
-                  if (item === "Services") { setMegaserv(true); setMegaprod(false); setMegasolut(false); setMegaIndu(false) }
-                  if (item === "Solutions") { setMegasolut(true); setMegaprod(false); setMegaserv(false); setMegaIndu(false) }
-                  if (item === "Industries") { setMegaIndu(true); setMegaprod(false); setMegaserv(false); setMegasolut(false) }
-                  console.log(megaprod, megaserv, megasolut, megaIndu)
+                  if (item === "Produits") { setMegaprod(true); setMegaserv(false); setMegasolut(false); setMegaIndu(false); setMegaCarr(false); setMegaComp(false) }
+                  if (item === "Services") { setMegaserv(true); setMegaprod(false); setMegasolut(false); setMegaIndu(false); setMegaCarr(false); setMegaComp(false) }
+                  if (item === "Solutions") { setMegasolut(true); setMegaprod(false); setMegaserv(false); setMegaIndu(false); setMegaCarr(false); setMegaComp(false) }
+                  if (item === "Industries") { setMegaIndu(true); setMegaprod(false); setMegaserv(false); setMegasolut(false); setMegaCarr(false); setMegaComp(false) }
+                  if (item === "Carrieres") { setMegaIndu(false); setMegaprod(false); setMegaserv(false); setMegasolut(false); setMegaCarr(true); setMegaComp(false) }
+                  if (item === "Entreprise") { setMegaIndu(false); setMegaprod(false); setMegaserv(false); setMegasolut(false); setMegaCarr(false); setMegaComp(true) }
                 }}>
-                {megaprod && item === "Produits" && megaIndu === false && megaserv === false && megasolut === false ? (
+                {megaprod && item === "Produits" && megacomp === false && megaIndu === false && megacarr === false && megaserv === false && megasolut === false ? (
                   <div className="flex gap-1 text-[#0000FF] border-b border-l-0 border-r-0 border-t-0 border-[#0000FF] py-2" onClick={(e) => {
                     e.stopPropagation(); // Empêche la propagation vers le parent
                     setMegaprod(false);
                   }}>
                     {item} <ChevronDown size={20} className="mt-1 rotate-180" />
                   </div>
-                ) : megaserv && item === "Services" && megaIndu === false && megaprod === false && megasolut === false ? (
+                ) : megaserv && item === "Services" && megacomp === false && megaIndu === false && megacarr === false && megaprod === false && megasolut === false ? (
                   <div className="flex gap-1 text-[#0000FF] border-b border-l-0 border-r-0 border-t-0 border-[#0000FF] py-2" onClick={(e) => {
                     e.stopPropagation(); // Empêche la propagation vers le parent
                     setMegaserv(false);
                   }}>
                     {item} <ChevronDown size={20} className="mt-1 rotate-180" />
                   </div>
-                ) : megasolut && item === "Solutions" && megaIndu === false && megaprod === false && megaserv === false ? (
+                ) : megasolut && item === "Solutions" && megacomp === false && megaIndu === false && megacarr === false && megaprod === false && megaserv === false ? (
                   <div className="flex gap-1 text-[#0000FF] border-b border-l-0 border-r-0 border-t-0 border-[#0000FF] py-2" onClick={(e) => {
                     e.stopPropagation(); // Empêche la propagation vers le parent
                     setMegasolut(false);
                   }}>
                     {item} <ChevronDown size={20} className="mt-1 rotate-180" />
                   </div>
-                ) : megaIndu && item === "Industries" && megaserv === false && megaprod === false && megasolut === false ? (
+                ) : megaIndu && item === "Industries" && megacomp === false && megacarr === false && megaserv === false && megaprod === false && megasolut === false ? (
                   <div className="flex gap-1 text-[#0000FF] border-b border-l-0 border-r-0 border-t-0 border-[#0000FF] py-2" onClick={(e) => {
                     e.stopPropagation(); // Empêche la propagation vers le parent
                     setMegaIndu(false);
+                  }}>
+                    {item} <ChevronDown size={20} className="mt-1 rotate-180" />
+                  </div>
+                ) : megacarr && item === "Carrieres" && megacomp === false && megaIndu === false && megaserv === false && megaprod === false && megasolut === false ? (
+                  <div className="flex gap-1 text-[#0000FF] border-b border-l-0 border-r-0 border-t-0 border-[#0000FF] py-2" onClick={(e) => {
+                    e.stopPropagation(); // Empêche la propagation vers le parent
+                    setMegaCarr(false);
+                  }}>
+                    {item} <ChevronDown size={20} className="mt-1 rotate-180" />
+                  </div>
+                ) : megacomp && item === "Entreprise" && megacarr === false && megaIndu === false && megaserv === false && megaprod === false && megasolut === false ? (
+                  <div className="flex gap-1 text-[#0000FF] border-b border-l-0 border-r-0 border-t-0 border-[#0000FF] py-2" onClick={(e) => {
+                    e.stopPropagation(); // Empêche la propagation vers le parent
+                    setMegaComp(false);
                   }}>
                     {item} <ChevronDown size={20} className="mt-1 rotate-180" />
                   </div>
@@ -318,7 +335,7 @@ const Navbar: React.FC = () => {
                 <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#00FFFF] to-[#D9D9D957] h-full"></div>
                 <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#E8E8E8] to-[#00FFFF] h-full"></div>
                 <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#05FC05] to-[#00FFFF] h-full"></div>
-                <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#FCE258] to-[#FF153E] h-full"></div>
+                <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#FCE258] to-[#FF153E] rounded-r-lg h-full"></div>
               </div>
             </div>
           </div>
@@ -331,7 +348,7 @@ const Navbar: React.FC = () => {
           id="megaProd"
           className="absolute overflow-x-hidden top-[160px] w-full h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-50"
         >
-          <div className="relative h-auto w-full grid lg:grid-cols-3 grid-cols-1 lg:justify-items-center justify-items-center items-center lg:px-0 gap-[40px]">
+          <div className="relative h-auto w-full grid lg:grid-cols-4 grid-cols-1 lg:justify-items-center justify-items-center items-center lg:px-0 gap-[40px]">
             <button
               onClick={() => setMegaIndu(false)}
               className="absolute top-[-10px] right-1 text-black cursor-pointer hover:text-gray-700 text-[24px]"
@@ -421,13 +438,151 @@ const Navbar: React.FC = () => {
                 <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#00FFFF] to-[#D9D9D957] h-full"></div>
                 <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#E8E8E8] to-[#00FFFF] h-full"></div>
                 <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#05FC05] to-[#00FFFF] h-full"></div>
-                <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#FCE258] to-[#FF153E] h-full"></div>
+                <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#FCE258] to-[#FF153E] rounded-r-lg h-full"></div>
               </div>
             </div>
           </div>
         </div>
       )}
 
+
+
+      {megacarr && (
+        <div
+          id="megaProd"
+          className="absolute overflow-x-hidden top-[160px] w-full h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-50"
+        >
+          <div className="relative h-auto w-full grid lg:grid-cols-4 grid-cols-1 lg:justify-items-center justify-items-center items-center lg:px-0 gap-[40px]">
+            <button
+              onClick={() => setMegaCarr(false)}
+              className="absolute top-[-10px] right-1 text-black cursor-pointer hover:text-gray-700 text-[24px]"
+            >
+              X
+            </button>
+
+            {/* Bloc 1 */}
+            <div className="lg:h-[200px] h-[140px] w-[410px] ml-32 flex flex-col items-center py-9">
+
+              <div className="w-[370px] flex flex-col justify-center gap-[10px]">
+                <a href="carriere1" className="flex items-center gap-3">
+                  {/* <Image src="images/megaIcon15.svg" width={36} height={36} alt="" /> */}
+                  <span className="poppins-light text-[15px]">Administration Recruting - Legal & Finance</span>
+                </a>
+                <a href="#" className="flex items-center gap-3">
+                  {/* <Image src="images/megaIcon16.svg" width={36} height={36} alt="" /> */}
+                  <span className="poppins-light text-[15px]">Communication & marketing - Sales</span>
+                </a>
+                <a href="#" className="flex items-center gap-3">
+                  {/* <Image src="images/megaIcon17.svg" width={36} height={36} alt="" /> */}
+                  <span className="poppins-light text-[15px]">Product devevoloppement</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Bloc 2 */}
+            <div className="lg:h-[200px] h-[140px] w-[410px] ml-32 flex flex-col items-center py-9">
+
+              <div className="w-[370px] flex flex-col justify-center gap-[10px]">
+                <a href="#" className="flex items-center gap-3">
+                  {/* <Image src="images/megaIcon18.svg" width={36} height={36} alt="" /> */}
+                  <span className="poppins-light text-[15px]">Software Developpement & IA - Design</span>
+                </a>
+                <a href="#" className="flex items-center gap-3">
+                  {/* <Image src="images/megaIcon19.svg" width={36} height={36} alt="" /> */}
+                  <span className="poppins-light text-[15px]">Strategist & Engineering</span>
+                </a>
+                <a href="#" className="flex items-center gap-3">
+                  {/* <Image src="images/megaIcon20.svg" width={36} height={36} alt="" /> */}
+                  <span className="poppins-light text-[15px]">Technical Operations & Security</span>
+                </a>
+              </div>
+            </div>
+
+
+            {/* Bloc final */}
+            <div className="bg-[#00FFFF] flex md:gap-[20px] gap-2 items-center w-full lg:w-[600px] lg:ml-[25px] ml-0 lg:h-[84.43px] h-auto rounded-[10px] m-auto">
+              <span className="ml-[30px] text-[16px] poppins-semibold">Our solutions</span>
+              <p><i className="fa-solid fa-arrow-right"></i></p>
+              <span className="text-[14px] poppins-light mr-auto">Explore our industry-leading hardsoft</span>
+              <div className="md:w-[300px] w-[300px] flex h-full">
+                <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#00FFFF] to-[#D9D9D957] h-full"></div>
+                <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#E8E8E8] to-[#00FFFF] h-full"></div>
+                <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#05FC05] to-[#00FFFF] h-full"></div>
+                <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#FCE258] to-[#FF153E] rounded-r-lg h-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+
+      {megacomp && (
+        <div
+          id="megaProd"
+          className="absolute overflow-x-hidden top-[160px] w-full h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-50"
+        >
+          <div className="relative h-auto w-auto grid lg:grid-cols-4 grid-cols-1 lg:justify-items-center justify-items-center items-center lg:px-0 gap-[90px]">
+            <button
+              onClick={() => setMegaComp(false)}
+              className="absolute top-[-10px] right-1 text-black cursor-pointer hover:text-gray-700 text-[24px]"
+            >
+              X
+            </button>
+
+            {/* Bloc 1 */}
+            <div className="lg:h-[200px] h-[140px] w-[210px] ml-32 flex flex-col items-center py-9">
+
+              <div className="w-[370px] flex flex-col justify-center gap-[10px]">
+                <a href="entreprisePage1" className="flex items-center gap-3">
+                  {/* <Image src="images/megaIcon15.svg" width={36} height={36} alt="" /> */}
+                  <span className="poppins-light text-[15px]">Qui sommes-nous ?</span>
+                </a>
+                <a href="entreprisePage2" className="flex items-center gap-3">
+                  {/* <Image src="images/megaIcon16.svg" width={36} height={36} alt="" /> */}
+                  <span className="poppins-light text-[15px]">Comment vous satisfaire ?</span>
+                </a>
+                <a href="entreprisePage3" className="flex items-center gap-3">
+                  {/* <Image src="images/megaIcon17.svg" width={36} height={36} alt="" /> */}
+                  <span className="poppins-light text-[15px]">A qui nous nous adressons?</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Bloc 2 */}
+            <div className="lg:h-[200px] h-[140px] w-[210px] ml-32 flex flex-col items-center py-9">
+
+              <div className="w-[370px] flex flex-col justify-center gap-[10px]">
+                <a href="entreprisePage4" className="flex items-center gap-3">
+                  {/* <Image src="images/megaIcon18.svg" width={36} height={36} alt="" /> */}
+                  <span className="poppins-light text-[15px]">Comment accompagner votre performance ?</span>
+                </a>
+                <a href="entreprisePage5" className="flex items-center gap-3">
+                  {/* <Image src="images/megaIcon19.svg" width={36} height={36} alt="" /> */}
+                  <span className="poppins-light text-[15px]">Quel est notre processus de mise en œuvre ?</span>
+                </a>
+                {/* <a href="industrie6" className="flex items-center gap-3"> */}
+                  {/* <Image src="images/megaIcon20.svg" width={36} height={36} alt="" /> */}
+                  {/* <span className="poppins-light text-[15px]">Technical Operations & Security</span> */}
+                {/* </a> */}
+              </div>
+            </div>
+
+
+            {/* Bloc final */}
+            <div className="bg-[#00FFFF] flex md:gap-[20px] gap-2 items-center w-full lg:w-[600px] lg:ml-[25px] ml-0 lg:h-[84.43px] h-auto rounded-[10px] m-auto">
+              <span className="ml-[30px] text-[16px] poppins-semibold">Our solutions</span>
+              <p><i className="fa-solid fa-arrow-right"></i></p>
+              <span className="text-[14px] poppins-light mr-auto">Explore our industry-leading hardsoft</span>
+              <div className="md:w-[300px] w-[300px] flex h-full">
+                <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#00FFFF] to-[#D9D9D957] h-full"></div>
+                <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#E8E8E8] to-[#00FFFF] h-full"></div>
+                <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#05FC05] to-[#00FFFF] h-full"></div>
+                <div className="md:w-[75px] w-[20px] bg-gradient-to-t from-[#FCE258] to-[#FF153E] rounded-r-lg h-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
 
       {/* Menu Mobile */}

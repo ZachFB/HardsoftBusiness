@@ -38,16 +38,30 @@ export default function Text3DAnimation() {
         duration: 0.3,
         ease: "power2.inOut",
         onComplete: () => {
-          // Changer le mot après le déplacement
-          setCurrentWord(nextWord);
-          currentIndex = (currentIndex + 1) % synonyms.length; // Passer au mot suivant
-
-          // Animation pour revenir à la position d'origine
-          gsap.to([rightTextRef.current, textRef.current], {
+           // Animation pour revenir à la position d'origine
+           gsap.to([rightTextRef.current, textRef.current], {
             x: 0,
             duration: 0.5,
             ease: "power2.inOut",
           });
+        }
+      });
+
+      gsap.to([textRef.current], {
+        duration: 0.5,
+        ease: "power2.inOut",
+        opacity: 0,
+       
+        onComplete: () => {
+          // Changer le mot après le déplacement
+          setCurrentWord(nextWord);
+          currentIndex = (currentIndex + 1) % synonyms.length; // Passer au mot suivant
+
+          gsap.to(textRef.current, {
+            opacity: 1,
+            duration: 0.5,
+            ease: "power2.inOut",
+          })
         },
       });
     };

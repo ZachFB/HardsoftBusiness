@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../public/HardSoftLogo.svg"
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
@@ -14,37 +14,39 @@ const Navbar: React.FC = () => {
   const [megaIndu, setMegaIndu] = useState(false);
   const [megacarr, setMegaCarr] = useState(false);
   const [megacomp, setMegaComp] = useState(false);
+ 
+  const [isScrolled, setIsScrolled] = useState(false);
 
   //Comportement 
   const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // Vérifier si la position de défilement dépasse 10 pixels
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    // Ajouter l'écouteur d'événement de défilement
+    window.addEventListener('scroll', handleScroll);
+
+    // Nettoyer l'écouteur d'événement lors du démontage du composant
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
 
   //Rendu
   return (
-    <header className="w-full">
-      {/* Barre d'annonce */}
-      <div className="w-screen bg-[#3333FF] text-center text-white h-auto lg:h-[36px] py-2 text-[13px]">
-        Introducing Gia™ - the world’s first AI-based HR compliance advisor. Get early access. Join the waitlist →
-      </div>
-
-      {/* Barre supérieure */}
-      <div className="w-screen h-[40px] bg-[#F9F9F9] text-[12px] flex justify-end items-center gap-8 px-4 py-2 text-gray-600">
-        <span>+1(888)-855-5328</span>
-        <a href="#">Contact Us</a>
-        <a href="#">Sign In</a>
-        <select className="w-[70px] h-[40px]">
-          <option value="en">English</option>
-          <option value="fr">French</option>
-          <option value="it">Italian</option>
-        </select>
-        <Image src="images/icon15.svg" width={2} height={2} alt="" />
-      </div>
-
-      {/* Menu principal */}
-      <div className="h-[90px] w-full flex items-center justify-between px-4 lg:px-8 font-medium">
+    <header className="w-full relative m-auto">
+    {/* Menu principal */}
+    <div className={`h-[90px] w-[100%] flex items-center justify-between font-medium fixed bg-white top-0 left-1/2 transform -translate-x-1/2 z-40 px-[5vw] ${isScrolled ? "shadow-lg" : ""}`}>
         <Link href={"/"}>
-          <Image src={logo} className="lg:w-[240px] lg:h-[60px] h-[30px] w-[150px]" width={240} height={60} alt="Logo" />
+          <Image src={logo} className="lg:w-[170px] lg:h-[60px] h-[30px] w-[100px]" width={50} height={60} alt="Logo" />
         </Link>
         {/* Menu Desktop */}
         <nav className="hidden lg:flex w-full max-w-[900px] h-[47px] ml-auto items-center justify-between">
@@ -111,9 +113,8 @@ const Navbar: React.FC = () => {
               </li>
             ))}
           </ul>
-          <div className="flex items-center gap-[16px]">
-            <button className="w-[112px] h-[47px] bg-[#494949] rounded-3xl text-white">Login</button>
-            <button className="w-[112px] h-[47px] bg-[#0000FF] rounded-3xl text-white">Sign Up</button>
+          <div className="flex items-center gap-[20px]">
+            <button className="w-[140px] h-[47px] bg-[#0000FF] text-white rounded-3xl ">Try for free</button>
           </div>
 
         </nav>
@@ -124,7 +125,7 @@ const Navbar: React.FC = () => {
         </button>
       </div>
       {megaprod && (
-        <div className="absolute top-[160px] left-0 w-full h-auto lg:h-[442px] bg-white shadow-lg rounded-lg p-6 flex justify-center z-50">
+        <div className="fixed top-[80px] left-0 w-full h-auto lg:h-[442px] bg-white shadow-lg rounded-lg p-6 flex justify-center z-40">
           <div className="relative h-auto lg:h-full w-full lg:w-[1202px] grid lg:grid-cols-3 grid-cols-1 lg:justify-items-center md:justify-items-start justify-items-center items-center lg:px-0 md:px-24 gap-[32px]">
 
             {/* Bloc bleu */}
@@ -178,7 +179,7 @@ const Navbar: React.FC = () => {
 
       )}
       {megaserv && (
-        <div className="absolute top-[160px] left-0 w-full h-auto lg:h-[442px] bg-white shadow-lg rounded-lg p-6 flex justify-center items-center z-50">
+        <div className="fixed top-[80px] left-0 w-full h-auto lg:h-[442px] bg-white shadow-lg rounded-lg p-6 flex justify-center items-center z-40">
           <div className="relative h-auto lg:h-full w-full lg:w-[1202px] grid lg:grid-cols-3 grid-cols-1 lg:justify-items-center md:justify-items-start justify-items-center items-center lg:px-0 md:px-24 gap-[32px]">
 
             {/* Bloc bleu */}
@@ -243,7 +244,7 @@ const Navbar: React.FC = () => {
       {megasolut && (
         <div
           id="megaProd"
-          className="absolute top-[160px] w-full lg:h-[600px] h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-50"
+          className="fixed top-[80px] left-0 w-full lg:h-[600px] h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-40"
         >
           <div className="relative h-auto w-full grid lg:grid-cols-3 grid-cols-1 lg:justify-items-center justify-items-center items-center lg:px-0 gap-[40px]">
             <button
@@ -346,7 +347,7 @@ const Navbar: React.FC = () => {
       {megaIndu && (
         <div
           id="megaProd"
-          className="absolute overflow-x-hidden top-[160px] w-full h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-50"
+          className="fixed top-[80px] left-0 overflow-x-hidden w-full h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-40"
         >
           <div className="relative h-auto w-full grid lg:grid-cols-4 grid-cols-1 lg:justify-items-center justify-items-center items-center lg:px-0 gap-[40px]">
             <button
@@ -450,7 +451,7 @@ const Navbar: React.FC = () => {
       {megacarr && (
         <div
           id="megaProd"
-          className="absolute overflow-x-hidden top-[160px] w-full h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-50"
+          className="fixed top-[80px] left-0 overflow-x-hidden w-full h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-40"
         >
           <div className="relative h-auto w-full grid lg:grid-cols-4 grid-cols-1 lg:justify-items-center justify-items-center items-center lg:px-0 gap-[40px]">
             <button
@@ -519,7 +520,7 @@ const Navbar: React.FC = () => {
       {megacomp && (
         <div
           id="megaProd"
-          className="absolute overflow-x-hidden top-[160px] w-full h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-50"
+          className="fixed top-[80px] left-0 overflow-x-hidden w-full h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-40"
         >
           <div className="relative h-auto w-auto grid lg:grid-cols-4 grid-cols-1 lg:justify-items-center justify-items-center items-center lg:px-0 gap-[90px]">
             <button

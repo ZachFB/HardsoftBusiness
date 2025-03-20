@@ -5,10 +5,10 @@ import React from 'react'
 
 const Service = () => {
     return (
-        <div className="w-full overflow-hidden">
-            <div className="px-4">
+        <div className="w-full overflow-hidden mb-20">
+          
                 <div
-                    className="w-full max-w-[1300px] h-auto lg:h-[450px] bg-[#F8F8FC] rounded-[15px] mt-[26px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 p-4">
+                    className="w-full max-w-[1300px] h-auto lg:h-[450px] bg-[#F8F8FC] rounded-[15px] mt-[150px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 py-4">
                     {/* <!-- Texte --> */}
                     <div className="w-full lg:w-[50%] flex flex-col items-center lg:items-start lg:pl-8 text-center lg:text-left">
                         <span className="poppins-light text-[12px]">Services</span>
@@ -21,18 +21,18 @@ const Service = () => {
                             Vous êtes Dirigeants et managers d'entreprises souhaitant optimiser la gestion stratégique et opérationnelle de leur organisation.
                         </span>
                         <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
-                            <button className="bg-[#0000FF] text-white p-3 px-4 rounded-3xl text-[15px] flex items-center font-light">
-                                <span className="mr-2">&#8594;</span> Demander une démonstration
-                            </button>
-                            <button className="border border-black text-black p-3 px-6 rounded-3xl text-[15px] font-light">Regarder la vidéo</button>
-                        </div>
+                        <button className="bg-[#0000FF] text-white p-3 lg:px-7 lg:w-auto w-[350px] rounded-3xl text-[15px] flex justify-center items-center font-light">
+                            <span className="mr-2">&#8594;</span> Try for free
+                        </button>
+                        <button className="border border-black text-black p-3 px-6 rounded-3xl text-[15px] font-light hidden">Regarder la vidéo</button>
+                    </div>
                     </div>
 
                     {/* <!-- Image --> */}
                     <div className="w-full md:w-[80%] lg:w-[50%] h-[250px] md:h-[350px] lg:h-[450px] lg:rounded-none rounded-[15px] lg:rounded-r-[15px] bg-cover bg-center"
-                        style={{ backgroundImage: `url(/images/heroService2.jpg)` }}></div>
+                        style={{ backgroundImage: `url(/images/heroSer2.png)` }}></div>
                 </div>
-            </div>
+          
 
 
             <div className="max-w-full lg:w-full">
@@ -44,8 +44,8 @@ const Service = () => {
 
             <div className="lg:h-auto h-auto w-full mt-[94px]">
                 <section className="flex flex-col lg:flex-row items-center lg:gap-0 gap-3">
-                    <div className="w-[100px] h-[220px] border-[#00000026] border-b border-r border-t hidden lg:block"></div>
-                    <div className="w-[391px] h-[220px] border-[#00000026] border relative flex justify-center">
+                    {/* <div className="w-[100px] h-[220px] border-[#00000026] border-b border-r border-t hidden lg:block"></div> */}
+                    <div className="lg:w-[450px] w-full h-[220px] border-[#00000026] border relative flex justify-center">
                         <section className="w-[314px] h-[236px] absolute bottom-[32px] flex flex-col py-[18px]">
                             <span className="w-[100px] h-[80px] mb-[20px] bg-white z-30">
                                 <Image src="/images/Vector.svg" height={63} width={63} className="m-auto mt-2" alt="" />
@@ -59,7 +59,7 @@ const Service = () => {
                             </div>
                         </section>
                     </div>
-                    <div className="w-[391px] h-[220px] border-[#00000026] border relative flex justify-center">
+                    <div className="lg:w-[450px] w-full h-[220px] border-[#00000026] border relative flex justify-center">
                         <section className="w-[314px] h-[236px] absolute bottom-[32px] flex flex-col py-[18px]">
                             <span className="w-[100px] h-[80px] mb-[20px] bg-white z-30">
                                 <Image src="images/icon8.svg" height={63} width={63} className="m-auto mt-2" alt="" />
@@ -73,7 +73,7 @@ const Service = () => {
                             </div>
                         </section>
                     </div>
-                    <div className="w-[391px] h-[220px] border-[#00000026] border relative flex justify-center">
+                    <div className="lg:w-[450px] w-full h-[220px] border-[#00000026] border relative flex justify-center">
                         <section className="w-[314px] h-[236px] absolute bottom-[32px] flex flex-col py-[18px]">
                             <span className="w-[100px] h-[80px] mb-[20px] bg-white z-30">
                                 <Image src="images/icon9.svg" height={63} width={63} className="m-auto mt-2" alt="" />
@@ -87,7 +87,7 @@ const Service = () => {
                             </div>
                         </section>
                     </div>
-                    <div className="w-[100px] h-[220px] border-[#00000026] border-b border-l border-t hidden lg:block"></div>
+                    {/* <div className="w-[100px] h-[220px] border-[#00000026] border-b border-l border-t hidden lg:block"></div> */}
                 </section>
             </div>
 
@@ -96,7 +96,7 @@ const Service = () => {
                 <h1 className="mt-[114px] text-[28px] lg:text-[40px] lg:w-[912px] text-center font-black">
                     Nous intervenons pour minimiser les risques associés à des phases critiques et garantir la compétitivité de votre entreprise:
                 </h1>
-                <div className="mt-[69px] w-full lg:h-[350px] h-auto grid lg:grid-cols-3 grid-col-1 lg:pl-9 place-content-center gap-[29px]">
+                <div className="mt-[69px] w-full lg:h-[350px] h-auto grid lg:grid-cols-3 grid-col-1 lg:pl-1 place-content-center gap-[29px]">
                     <div className="max-w-[380px] py-4 h-[450px] bg-white rounded-[20px] flex items-center pt-8">
                         <div className="w-full h-full flex flex-col gap-5 items-center justify-center ">
                             <span
@@ -149,14 +149,14 @@ const Service = () => {
 
 
      <div className="w-full flex justify-center">
-        <div className="mt-[84px] lg:w-[1200px] w-full h-auto lg:h-[403px] flex flex-col lg:flex-row items-center">
+        <div className="mt-[84px] w-full h-auto lg:h-[403px] flex flex-col lg:flex-row items-center">
             <div
-                className="lg:w-[425px] w-full h-full flex justify-center items-center bg-gradient-to-br from-[#0000FF] to-[#00FFFF] rounded-l-2xl">
+                className="lg:w-[625px] w-full h-full flex justify-center items-center bg-gradient-to-br from-[#0000FF] to-[#00FFFF] rounded-l-2xl">
                 <section className="w-[350px] h-[250px] bg-center rounded-2xl"
                     style={{backgroundImage: `url(images/baner4.jpg)`}}></section>
             </div>
             <div
-                className="lg:w-[775px] w-full h-full border border-[#0000004D] border-l-none rounded-r-3xl flex justify-center items-center">
+                className="w-full h-full border border-[#0000004D] border-l-none rounded-r-3xl flex justify-center items-center">
                 <section className="lg:w-[587px] w-full py-9 lg:py-0 flex flex-col justify-center">
                     <h1 className="w-full text-[28px] text-center lg:text-left lg:text-[31px] font-black">Analyse des processus existants</h1>
                     <p className="lg:w-[551px] w-full px-8 lg:px-0 text-[16px] poppins-light leading-[19.2px] mt-[20px]">
@@ -175,12 +175,12 @@ const Service = () => {
 
 
     <div className="w-full flex justify-center">
-        <div className="lg:w-[1201px] mt-[44px] grid grid-cols-1 lg:grid-cols-2 lg:gap-[35px] gap-[50px]">
+        <div className="w-full mt-[44px] grid grid-cols-1 lg:grid-cols-2 lg:gap-[35px] gap-[50px]">
 
             <div>
                 <div className="relative h-[278px] bg-cover rounded-tr-2xl"
                     style={{backgroundImage: `url(/images/color5.svg)`}}>
-                    <Image src="/images/image5.png" height={428} width={428} className="absolute z-20 top-[30px] right-[0px]" alt=""/>
+                    <Image src="/images/ser1.png" height={300} width={350} className="absolute z-20 top-[30px] rounded-tl-2xl right-[0px]" alt=""/>
                 </div>
                 <div
                     className="flex flex-col items-center px-3 lg:px-0 h-auto pb-9 lg:pb-10 w-full border-[#0000004D] border-b border-l border-r rounded-b-[25px]">
@@ -197,7 +197,7 @@ const Service = () => {
             <div>
                 <div className="relative h-[278px] bg-cover rounded-tr-2xl"
                     style={{backgroundImage: `url(/images/color6.svg)`}}>
-                    <Image src="/images/image6.png" height={400} width={408} className="absolute z-20 top-[75px] right-[0px]" alt=""/>
+                    <Image src="/images/ser2.png" height={400} width={408} className="absolute z-20 top-[75px] rounded-tl-2xl right-[0px]" alt=""/>
                 </div>
                 <div
                     className="flex flex-col items-center px-3 lg:px-0 h-auto pb-9 lg:pb-20 w-full border-[#0000004D] border-b border-l border-r rounded-b-[25px]">
@@ -216,10 +216,10 @@ const Service = () => {
 
 
     <div className="w-full flex justify-center">
-        <div className="mt-[42px] w-full lg:w-[1200px] lg:h-[400px] lg:shadow-transparent shadow-lg h-auto flex flex-col lg:flex-row items-center ">
-            <section className="lg:w-[425px] w-full lg:h-full h-[400px]" style={{backgroundImage: `url(/images/baner1.svg)`}}></section>
+        <div className="mt-[42px] w-full lg:h-[400px] lg:shadow-transparent shadow-lg h-auto flex flex-col lg:flex-row items-center ">
+            <section className="lg:w-[625px] w-full lg:h-full h-[400px]" style={{backgroundImage: `url(/images/baner1.svg)`}}></section>
             <div
-                className="lg:w-[775px] h-[395px] w-full lg: border border-[#0000004D] border-l-none rounded-r-3xl flex justify-center items-center">
+                className="h-[395px] w-full lg: border border-[#0000004D] border-l-none rounded-r-3xl flex justify-center items-center">
                 <section className="lg:w-[587px] h-auto px-6 lg:px-0">
                     <h1 className="poppins-semibold text-[28px] text-center lg:text-left lg:text-[31px] font-black">Conseils en temps réel par des consultants en stratégie</h1>
                     <p className="lg:w-[580px] w-full px-8 lg:px-0 text-[16px] poppins-light leading-[19.2px] mt-[20px]">

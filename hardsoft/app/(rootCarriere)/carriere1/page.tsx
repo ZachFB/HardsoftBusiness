@@ -5,7 +5,7 @@ import React from 'react'
 
 const page = () => {
     return (
-        <div className='w-full bg-[#f6fdfc]'>
+        <div className='w-full mt-32'>
             <section className='flex  w-full justify-center items-center lg:h-[475px] text-[#06060c]'>
                 <div className='lg:w-[90%] lg:h-[430px]  from-[#00FFFF] via-[#00FFFF] to-[#0000FF] bg-gradient-to-b rounded-3xl border-[8px] border-b-[#0000FF] border-t-[#00FFFF] border-l-[#00FFFF] border-r-[#0000FF] flex flex-col gap-4 justify-center items-center text-center px-8 lg:py-0 py-8'>
                 <span className='w-[69px] absolute z-10 h-[430px]'></span>

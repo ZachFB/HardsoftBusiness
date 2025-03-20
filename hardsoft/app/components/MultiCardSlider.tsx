@@ -45,7 +45,7 @@ const MultiCardSlider = () => {
       </Swiper>
 
       {/* Barre de défilement personnalisée */}
-      <div className="swiper-scrollbar !h-[25px] flex items-center !bg-white border border-black !px-2 !rounded-full">
+      <div className="swiper-scrollbar !h-[25px] flex items-center !bg-white border border-black !px-2 !rounded-full ">
         <div className="swiper-scrollbar-drag !h-[11px] !bg-gray-400 !rounded-full"></div>
       </div>
 

@@ -3,9 +3,9 @@ import React from "react";
 
 const Service = () => {
   return (
-    <div className="w-full overflow-hidden">
-      <div className="px-4">
-        <div className="w-full max-w-[1300px] h-auto lg:h-[450px] bg-[#F8F8FC] rounded-[15px] mt-[26px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 p-4">
+    <div className="w-full overflow-hidden mb-20">
+     
+        <div className="w-full max-w-[1300px] h-auto lg:h-[450px] bg-[#F8F8FC] rounded-[15px] mt-[150px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 py-4">
           {/* <!-- Texte --> */}
           <div className="w-full lg:w-[50%] flex flex-col items-center lg:items-start lg:pl-8 text-center lg:text-left">
             <span className="poppins-light text-[12px]">Services</span>
@@ -30,10 +30,10 @@ const Service = () => {
           {/* <!-- Image --> */}
           <div
             className="w-full md:w-[80%] lg:w-[50%] h-[250px] md:h-[350px] lg:h-[450px] lg:rounded-none rounded-[15px] lg:rounded-r-[15px] bg-cover bg-center"
-            style={{ backgroundImage: `url(/images/HeroService6.jpg)` }}
+            style={{ backgroundImage: `url(/images/heroSer8.jpg)` }}
           ></div>
         </div>
-      </div>
+      
 
       <div className="max-w-full flex justify-center">
         <h1 className="lg:mt-[129px] mt-[80px] text-center lg:mx-20 mx-3 text-[28px] lg:text-[40px] font-black">

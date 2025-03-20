@@ -4,35 +4,35 @@ import React from 'react'
 
 const Service = () => {
     return (
-        <div className="w-full overflow-hidden">
-            <div className="px-4">
-                <div
-                    className="w-full max-w-[1300px] h-auto lg:h-[450px] bg-[#F8F8FC] rounded-[15px] mt-[26px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 p-4">
-                    {/* <!-- Texte --> */}
-                    <div className="w-full lg:w-[50%] flex flex-col items-center lg:items-start lg:pl-8 text-center lg:text-left">
-                        <span className="poppins-light text-[12px]">Services</span>
-                        <div className="text-[30px] font-semibold lg:text-[40px]">
-                            <span
-                                className="lg:mt-8 mt-4 text-[30px] font-semibold lg:text-[40px] bg-gradient-to-r from-[#0000FF] to-[#00FFFF] bg-clip-text text-transparent leading-[38px] lg:leading-[48px]">
-                                Stratégie de Réinvestissement
-                            </span>
-                        </div>
-                        <span className="mt-[20px] lg:mt-[16px] text-[18px] text-[#494949] font-medium">
-                        Vous êtes responsables R&D, chefs de produits, ou directeurs de l'innovation cherchant à intégrer l'innovation dans la culture de votre entreprise.
-                        </span>
-                        <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
-                            <button className="bg-[#0000FF] text-white p-3 px-4 rounded-3xl text-[15px] flex items-center font-light">
-                                <span className="mr-2">&#8594;</span> Demander une démonstration
-                            </button>
-                            <button className="border border-black text-black p-3 px-6 rounded-3xl text-[15px] font-light">Regarder la vidéo</button>
-                        </div>
-                    </div>
+        <div className="w-full overflow-hidden mb-20">
 
-                    {/* <!-- Image --> */}
-                    <div className="w-full md:w-[80%] lg:w-[50%] h-[250px] md:h-[350px] lg:h-[450px] lg:rounded-none rounded-[15px] lg:rounded-r-[15px] bg-cover bg-center"
-                        style={{ backgroundImage: `url(/images/heroService4.jpg)` }}></div>
+            <div
+                className="w-full max-w-[1300px] h-auto lg:h-[450px] bg-[#F8F8FC] rounded-[15px] mt-[150px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 py-4">
+                {/* <!-- Texte --> */}
+                <div className="w-full lg:w-[50%] flex flex-col items-center lg:items-start lg:pl-8 text-center lg:text-left">
+                    <span className="poppins-light text-[12px]">Services</span>
+                    <div className="text-[30px] font-semibold lg:text-[40px]">
+                        <span
+                            className="lg:mt-8 mt-4 text-[30px] font-semibold lg:text-[40px] bg-gradient-to-r from-[#0000FF] to-[#00FFFF] bg-clip-text text-transparent leading-[38px] lg:leading-[48px]">
+                            Stratégie de Réinvestissement
+                        </span>
+                    </div>
+                    <span className="mt-[20px] lg:mt-[16px] text-[18px] text-[#494949] font-medium">
+                        Vous êtes responsables R&D, chefs de produits, ou directeurs de l'innovation cherchant à intégrer l'innovation dans la culture de votre entreprise.
+                    </span>
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
+                        <button className="bg-[#0000FF] text-white p-3 lg:px-7 lg:w-auto w-[350px] rounded-3xl text-[15px] flex justify-center items-center font-light">
+                            <span className="mr-2">&#8594;</span> Try for free
+                        </button>
+                        <button className="border border-black text-black p-3 px-6 rounded-3xl text-[15px] font-light hidden">Regarder la vidéo</button>
+                    </div>
                 </div>
+
+                {/* <!-- Image --> */}
+                <div className="w-full md:w-[80%] lg:w-[50%] h-[250px] md:h-[350px] lg:h-[450px] lg:rounded-none rounded-[15px] lg:rounded-r-[15px] bg-cover bg-center"
+                    style={{ backgroundImage: `url(/images/heroSer4.jpg)` }}></div>
             </div>
+
 
 
             <div className="max-w-full lg:w-full flex justify-center">
@@ -52,7 +52,7 @@ const Service = () => {
                             <div>
                                 {/* <span className="font-black text-[16px]">France Relance : </span> */}
                                 <p className="poppins-medium ">
-                                Sur des projets d'expansion,
+                                    Sur des projets d'expansion,
                                 </p>
                             </div>
                         </section>
@@ -65,7 +65,7 @@ const Service = () => {
                             <div>
                                 {/* <span className="font-black text-[16px]">Plan de Relance Numérique : </span> */}
                                 <p className="poppins-medium ">
-                                d'innovation,
+                                    d'innovation,
                                 </p>
                             </div>
                         </section>
@@ -78,7 +78,7 @@ const Service = () => {
                             <div>
                                 {/* <span className="font-black text-[16px]">Plan de Relance Numérique : </span> */}
                                 <p className="poppins-medium ">
-                                ou de renforcement des capacités existantes.
+                                    ou de renforcement des capacités existantes.
                                 </p>
                             </div>
                         </section>
@@ -89,7 +89,7 @@ const Service = () => {
 
             <div className="mt-[108px] max-w-full h-auto pb-28 bg-[#F8F8FC] flex flex-col items-center">
                 <h1 className="mt-[114px] text-[28px] lg:text-[40px] lg:w-[912px] text-center font-black">
-                Nous intervenons dans le réinvestissement de vos capitaux ou de vos bénéfices :
+                    Nous intervenons dans le réinvestissement de vos capitaux ou de vos bénéfices :
                 </h1>
                 <div className='w-full flex justify-center'>
                     <div className="mt-[69px] w-[800px] lg:h-[480px] h-auto grid lg:grid-cols-2 grid-col-1 lg:pl-9 place-content-center gap-[29px]">
@@ -124,9 +124,9 @@ const Service = () => {
 
 
             <div className="w-full flex justify-center">
-                <div className="mt-[84px] lg:w-[1200px] w-full h-auto lg:h-[403px] flex flex-col lg:flex-row items-center">
+                <div className="mt-[84px] w-full h-auto lg:h-[403px] flex flex-col lg:flex-row items-center">
                     <div
-                        className="lg:w-[425px] w-full h-full flex justify-center items-center bg-gradient-to-br from-[#0000FF] to-[#00FFFF] rounded-l-2xl">
+                        className="lg:w-[525px] w-full h-full flex justify-center items-center bg-gradient-to-br from-[#0000FF] to-[#00FFFF] rounded-l-2xl">
                         <section className="w-[350px] h-[250px] bg-center bg-cover rounded-2xl"
                             style={{ backgroundImage: `url(images/baner5.jpg)` }}></section>
                     </div>
@@ -149,12 +149,12 @@ const Service = () => {
 
 
             <div className="w-full flex justify-center">
-                <div className="lg:w-[1201px] mt-[44px] grid grid-cols-1 lg:grid-cols-2 lg:gap-[35px] gap-[50px]">
+                <div className="w-full mt-[44px] grid grid-cols-1 lg:grid-cols-2 lg:gap-[35px] gap-[50px]">
 
                     <div>
                         <div className="relative h-[278px] bg-cover rounded-tr-2xl"
                             style={{ backgroundImage: `url(/images/color5.svg)` }}>
-                            <Image src="/images/image10.jpg" height={428} width={428} className="absolute z-20 top-[37px] rounded-t-2xl right-[0px]" alt="" />
+                            <Image src="/images/ser5.jpg" height={428} width={428} className="absolute z-20 top-[37px] rounded-t-2xl right-[0px]" alt="" />
                         </div>
                         <div
                             className="flex flex-col items-center px-3 lg:px-0 h-auto pb-9 lg:pb-10 w-full border-[#0000004D] border-b border-l border-r rounded-b-[25px]">
@@ -172,7 +172,7 @@ const Service = () => {
                     <div>
                         <div className="relative h-[278px] bg-cover rounded-tr-2xl"
                             style={{ backgroundImage: `url(/images/color6.svg)` }}>
-                            <Image src="/images/image11.jpg" height={400} width={380} className="absolute z-20 top-[25px] rounded-t-2xl right-[0px]" alt="" />
+                            <Image src="/images/ser6.jpg" height={428} width={501} className="absolute z-20 top-[25px] rounded-t-2xl right-[0px]" alt="" />
                         </div>
                         <div
                             className="flex flex-col items-center px-3 lg:px-0 h-auto pb-9 lg:pb-16 w-full border-[#0000004D] border-b border-l border-r rounded-b-[25px]">
@@ -197,16 +197,16 @@ const Service = () => {
                     <div className="lg:w-[981px] w-full py-auto flex px-3 lg:px-0 ml-0 lg:ml-20 gap-[159px]">
                         <div className="flex flex-col text-white">
                             <h1 className="lg:w-[787px] w-full text-[28px] lg:text-[40px] font-black lg:leading-[48px] lg:text-justify">Pourquoi auriez-vous besoin des avis, des conseils et des recommandations de nos consultants ? </h1>
-                         <div 
-                    className={`flex flex-col gap-10 mt-6`}
-                >
-                    <h2 className="text-[24px] mt-[22px] leading-[24.2px]">
-                    Pour assurer une croissance durable et renforcer la position concurrentielle de l'entreprise :
-                    </h2>
-                    <p className="text-[16px] poppins-light leading-[19.2px]">
-                    Nos consultants vous apportent une expertise stratégique pour réinvestir vos ressources de manière ciblée. En bénéficiant de leurs conseils, vous pouvez identifier les meilleures opportunités pour maximiser la rentabilité et minimiser les risques, tout en alignant vos décisions d'investissement avec les objectifs à long terme de l'entreprise. Cela vous permet de soutenir une croissance continue et de consolider votre avantage concurrentiel dans un marché en constante évolution.
-                    </p>
-                </div>
+                            <div
+                                className={`flex flex-col gap-10 mt-6`}
+                            >
+                                <h2 className="text-[24px] mt-[22px] leading-[24.2px]">
+                                    Pour assurer une croissance durable et renforcer la position concurrentielle de l'entreprise :
+                                </h2>
+                                <p className="text-[16px] poppins-light leading-[19.2px]">
+                                    Nos consultants vous apportent une expertise stratégique pour réinvestir vos ressources de manière ciblée. En bénéficiant de leurs conseils, vous pouvez identifier les meilleures opportunités pour maximiser la rentabilité et minimiser les risques, tout en alignant vos décisions d'investissement avec les objectifs à long terme de l'entreprise. Cela vous permet de soutenir une croissance continue et de consolider votre avantage concurrentiel dans un marché en constante évolution.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <ProgressGradient />

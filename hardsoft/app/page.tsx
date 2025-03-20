@@ -1,40 +1,41 @@
-import { CalendarCheck, Clock, Dot, ListTodo } from "lucide-react";
+import { CalendarCheck, Clock, Dot, ListTodo } from "lucide-react"; 
 import Image from "next/image";
 import MultiCardSlider from "./components/MultiCardSlider";
+import ProgressGradient from "./components/progressGradientPetit";
 
 export default function Home() {
   return (
     <div className="">
       <div
-        className="w-full max-w-[1300px] h-auto lg:h-[600px] rounded-[15px] mt-[26px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 p-4">
+        className="w-full h-auto lg:h-[600px] rounded-[15px] mt-[150px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-60">
         {/* <!-- Texte --> */}
-        <div className="w-full lg:w-[50%] flex flex-col items-center lg:items-start lg:pl-8 text-center lg:text-left">
+        <div className="w-full lg:w-[50%] flex flex-col items-center lg:items-start text-center lg:text-left">
           <span className="poppins-light text-[12px]"></span>
-          <div className="text-4xl font-semibold lg:text-6xl leading-[38px] lg:leading-[80px]">
+          <div className="text-4xl font-semibold lg:text-5xl leading-[38px] lg:leading-[80px]">
             Integrez des LLM dans vos processus pour la planification <span
-              className="lg:mt-8 mt-4 text-4xl font-semibold lg:text-6xl bg-gradient-to-r from-[#0000FF] to-[#00FFFF] bg-clip-text text-transparent">
+              className="lg:mt-8 mt-4 text-4xl font-semibold lg:text-5xl bg-gradient-to-r from-[#0000FF] to-[#00FFFF] bg-clip-text text-transparent">
               stratégique</span> de votre entreprise
           </div>
           <span className="mt-[20px] lg:mt-[18px] text-[20px] text-[#494949] font-medium">
             Raisonner en s&#39;adaptant à des besoins complexes, agir en exploitant des outils externes pour atteindre un objectif précis, apprendre en s&#39;améliorant avec le temps pour mieux vous servir.
           </span>
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
-            <button className="bg-[#0000FF] text-white p-3 px-4 rounded-3xl text-[15px] flex items-center font-light">
-              <span className="mr-2">&#8594;</span> Demander une démonstration
+            <button className="bg-[#0000FF] text-white p-3 lg:px-7 lg:w-auto w-[350px] rounded-3xl text-[15px] flex justify-center items-center font-light">
+              <span className="mr-2">&#8594;</span> Try for free
             </button>
-            <button className="border border-black text-black p-3 px-6 rounded-3xl text-[15px] font-light">Regarder la vidéo</button>
+            <button className="border border-black text-black p-3 px-6 rounded-3xl text-[15px] font-light hidden">Regarder la vidéo</button>
           </div>
         </div>
 
         {/* <!-- Image --> */}
         <div className="w-full md:w-[80%] lg:w-[50%] h-[250px] md:h-[350px] lg:h-[600px] rounded-[18px] lg:rounded-[18px] bg-cover bg-center"
-          style={{ backgroundImage: `url(/images/heroService.jpg)` }}></div>
+          style={{ backgroundImage: `url(/images/heroAc.jpeg)` }}></div>
       </div>
 
 
 
       <div className="w-full flex justify-center lg:mt-24 mt-14" >
-        <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 w-[86%]">
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
           <div className="flex flex-col gap-4">
             <h1 className="text-[28px] lg:text-[30px] mb-3">Ce que votre agent ia peut faire pour vous</h1>
             <div className="flex gap-2 items-start"><Image src="/images/1ac.svg" alt="alt" width={40} height={40} />
@@ -106,7 +107,7 @@ export default function Home() {
 
       <div className="w-full h-auto lg:h-[760px] mt-[108px]">
         <div className="w-full h-full grid lg:grid-cols-3 grid-cols-1">
-          <div className="bg-[#0000FF] w-full lg:w-[480px] h-full lg:col-span-1 relative">
+          <div className="bg-[#0000FF] w-full h-full lg:col-span-1 relative">
             <Image src="/images/ac1.svg" alt="alt" width={500} height={500} />
             <h2 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[#FFFFFF] text-[80px] lg:text-[120px]">96%</h2>
             <p className="text-[16px] text-[#FFFFFF] w-[253px] absolute top-2/3 left-1/4 lg:m-auto">de taux de satisfaction sur l’ensemble des Diags Data IA lancés</p>
@@ -123,17 +124,17 @@ export default function Home() {
               </div>
             </div>
             <div className="grid h-[900px] lg:h-full lg:grid-cols-3 grid-cols-1 lg:ml-8">
-              <div className="bg-[#FFFFFF] relative flex flex-col items-center justify-end lg:py-[39px] py-5 px-8">
+              <div className="bg-[#FFFFFF] relative flex flex-col items-center justify-end lg:py-[39px] py-5 px-5">
                 <Image src="/images/ac2.svg" className="absolute" alt="alt" width={200} height={200} />
                 <h2 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[80px]">81%</h2>
                 <p className="text-[16px]">des salariés considèrent l’IA comme un moyen d’améliorer ses compétences professionnelles 4</p>
               </div>
-              <div className="bg-[#A3F8FF] relative flex flex-col items-center justify-end lg:py-[39px] py-5 px-8">
+              <div className="bg-[#A3F8FF] relative flex flex-col items-center justify-end lg:py-[39px] py-5 px-5">
                 <Image src="/images/ac3.svg" className="absolute" alt="alt" width={200} height={200} />
                 <h2 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[80px]">90%</h2>
                 <p className="text-[16px]">des dirigeants estiment que l&#39;intelligence artificielle représente une opportunité business 5</p>
               </div>
-              <div className="bg-[#FFFFFF] relative flex flex-col items-center justify-end lg:py-[39px] py-5 px-8">
+              <div className="bg-[#FFFFFF] relative flex flex-col items-center justify-end lg:py-[39px] py-5 px-5">
                 <Image src="/images/ac4.svg" className="absolute" alt="alt" width={200} height={200} />
                 <h2 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[80px]">40%</h2>
                 <p className="text-[16px]">des dirigeants signalent une productivité accrue grâce à l’automatisation par l’IA 6</p>
@@ -159,7 +160,7 @@ export default function Home() {
 
 
 
-      <div className="w-full h-auto lg:py-28 py-11 lg:px-0 px-4 bg-[#F6F8FC] flex lg:flex-row flex-col-reverse justify-center items-center gap-5 lg:gap-40">
+      <div className="w-full h-auto lg:py-28 py-11 lg:px-0 px-4 bg-[#F6F8FC] flex lg:flex-row flex-col-reverse justify-center items-center gap-5 lg:gap-40 mt-28">
         <Image src="/images/agentIA.svg" alt="alt" width={532} height={281} />
         <h1 className="text-[#071A39] text-2xl lg:text-[46px] lg:w-[30%] lg:leading-[60px]">Un engagement stratégique pour l&#39;avenir de votre entreprise</h1>
       </div>
@@ -210,7 +211,7 @@ export default function Home() {
 
 
       <div className="w-full h-auto flex justify-center text-[#FFFFFF]">
-        <div className="bg-[#9B0069] py-20 w-[90%] h-full flex lg:flex-row flex-col justify-center items-center rounded-2xl gap-8">
+        <div className="bg-[#9B0069] py-20 w-[100%] h-full flex lg:flex-row flex-col justify-center items-center rounded-2xl gap-8">
           <section className="lg:w-[45%] w-[80%]">
             <h1 className="text-[32px]">Le Diag Data IA, une brique essentielle dans le programme France 2030</h1>
             <div className="flex flex-col gap-9 mt-4">
@@ -320,57 +321,57 @@ export default function Home() {
       </div>
 
 
-      <div className="mt-[122px] w-full h-auto px-10 md:px-32 flex flex-col gap-20">
+      <div className="mt-[122px] w-full h-auto flex flex-col gap-20">
         <h1 className="text-[30px]">How It Works</h1>
         <div className="flex lg:flex-row flex-col gap-6">
-          <Image src="/images/heroProd.jpg" alt="alt" width={500} height={500} />
+          <Image src="/images/imgb1.jpeg" alt="alt" className="rounded-xl" width={600} height={500} />
           <section className="w-full flex lg:justify-end items-center">
-            <div className="w-[435px] flex flex-col justify-center gap-3 h-full border-t border-black">
+            <div className="w-[550px] flex flex-col justify-center gap-3 h-full">
               <h2 className="text-[34px]">Connect.</h2>
               <p className="text-[16px]">Rapidly integrate business process data into the Foundry Ontology with built-in connectors, unlocking connectivity and insights that span your entire organization.</p>
             </div>
           </section>
         </div>
         <div className="flex lg:flex-row-reverse flex-col gap-6">
-          <Image src="/images/heroProd.jpg" alt="alt" width={500} height={500} />
+          <Image src="/images/imgb2.png" alt="alt" className="rounded-xl" width={600} height={500} />
           <section className="w-full flex items-center">
-            <div className="w-[435px] flex flex-col justify-center gap-3 h-full border-t border-black">
+            <div className="w-[550px] flex flex-col justify-center gap-3 h-full">
               <h2 className="text-[34px]">Understand.</h2>
               <p className="text-[16px]">Mine processes to produce a point-and-click visualization and model the ideal path. An easy-to-navigate view of expected behavior and associated deviations allows you to investigate at varying levels of granularity — from individual steps to high-level trends.</p>
             </div>
           </section>
         </div>
         <div className="flex lg:flex-row flex-col gap-6">
-          <Image src="/images/heroProd.jpg" alt="alt" width={500} height={500} />
+          <Image src="/images/imgb3.png" alt="alt" className="rounded-xl" width={600} height={500} />
           <section className="w-full flex lg:justify-end items-center">
-            <div className="w-[435px] flex flex-col justify-center gap-3 h-full border-t border-black">
+            <div className="w-[550px] flex flex-col justify-center gap-3 h-full">
               <h2 className="text-[34px]">Analyze.</h2>
               <p className="text-[16px]">With the Foundry Ontology, query related objects from across your business to comprehend underlying drivers of unexpected process transitions. Rapidly analyze deviations, diagnose bottlenecks, and perform root cause analysis.</p>
             </div>
           </section>
         </div>
         <div className="flex lg:flex-row-reverse flex-col gap-6">
-          <Image src="/images/heroProd.jpg" alt="alt" width={500} height={500} />
+          <Image src="/images/imgb4.png" alt="alt" className="rounded-xl" width={600} height={500} />
           <section className="w-full flex items-center">
-            <div className="w-[435px] flex flex-col justify-center gap-3 h-full border-t border-black">
+            <div className="w-[550px] flex flex-col justify-center gap-3 h-full">
               <h2 className="text-[34px]">Act.</h2>
               <p className="text-[16px]">Process orchestration means you can take action within Foundry to address inefficiencies, writing back to external systems to fix problems at their source — while keeping all your systems in sync.</p>
             </div>
           </section>
         </div>
         <div className="flex lg:flex-row flex-col gap-6">
-          <Image src="/images/heroProd.jpg" alt="alt" width={500} height={500} />
+          <Image src="/images/imgb5.png" alt="alt" className="rounded-xl" width={600} height={500} />
           <section className="w-full flex lg:justify-end items-center">
-            <div className="w-[435px] flex flex-col justify-center gap-3 h-full border-t border-black">
+            <div className="w-[550px] flex flex-col justify-center gap-3 h-full">
               <h2 className="text-[34px]">Automate.</h2>
               <p className="text-[16px]">Continuously optimize your processes with the ability to implement custom triggers for automatic action when steps are completed, milestones are met, or thresholds are breached.</p>
             </div>
           </section>
         </div>
         <div className="flex lg:flex-row-reverse flex-col gap-6">
-          <Image src="/images/heroProd.jpg" alt="alt" width={500} height={500} />
+          <Image src="/images/imgb6.png" alt="alt" className="rounded-xl" width={600} height={500} />
           <section className="w-full flex items-center">
-            <div className="w-[435px] flex flex-col justify-center gap-3 h-full border-t border-black">
+            <div className="w-[550px] flex flex-col justify-center gap-3 h-full">
               <h2 className="text-[34px]">Communicate.</h2>
               <p className="text-[16px]">Rapidly integrate business process data into the Foundry Ontology with built-in connectors, unlocking connectivity and insights that span your entire organization.</p>
             </div>
@@ -379,27 +380,21 @@ export default function Home() {
       </div>
 
 
-      <div className="mt-[126px] w-full bg-[#0000FF] pt-20 px-10 md:px-28 md:rounded-t-[100px] text-white h-auto flex lg:flex-row flex-col gap-5">
-        <div className="flex flex-col mt-[-50px] gap-10">
-          <div className="flex flex-col gap-3">
-            <h1 className="text-[32px]">Une question, une demande ?</h1>
+      <div className="w-full mb-[80px] mt-[126px] bg-[#0000FF] lg:pt-0 pt-8 px-10 md:px-28 lg:px-24 md:rounded-t-[100px] rounded-t-[20px] text-white h-auto flex lg:flex-row flex-col gap-5 shadow-lg">
+        <div className="flex flex-col mt-[-20px] lg:gap-2 gap-10">
+          <div className="flex flex-col lg:gap-1 gap-3">
+            <h1 className="text-[32px] lg:pt-4">Une question, une demande ?</h1>
             <h3 className="text-[16px]">Contactez-nous ou appelez directement notre service client au 01 89 19 86 47, disponible du lundi au vendredi de 9h à 17h.</h3>
             <p className="text-[12px]">Vos données à caractère personnel sont collectées et traitées par Bpifrance en qualité de responsable de traitement dans le cadre du présent formulaire. En savoir plus sur la protection des données personnelles..</p>
           </div>
-          <button className="p-4 w-[225px] rounded-[40px] hover:font-extrabold text-xl border hover:border-transparent border-black relative overflow-hidden group">
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-black">
-              Nous contactez
-            </span>
-            <div className="absolute inset-0 w-0 bg-[#11EEFF] transition-all duration-300 group-hover:w-full"></div>
-          </button>
         </div>
-
-        <div>
-          <Image src="/images/contactAc.svg" alt="alt" width={950} height={950} />
+        <div className="">
+          <Image src="/images/contactAc.svg" className="mt-24" alt="alt" width={950} height={950} />
         </div>
-
+        <ProgressGradient/>
       </div>
 
+     
 
 
 

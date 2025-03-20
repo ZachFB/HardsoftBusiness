@@ -6,17 +6,17 @@ import React from 'react'
 const page = () => {
     return (
         <div className='w-full'>
-            <div className='w-full flex lg:flex-row flex-col h-auto bg-[#0000FF] py-6 lg:mt-[34px]'>
+            <div className='w-full flex lg:flex-row flex-col h-auto bg-[#0000FF] md:py-0 py-40 mt-[150px] rounded-lg'>
 
-                <section className='flex  w-full lg:w-[52%] h-[575px] text-white'>
-                    <span className='w-[69px] h-[599px] from-[#0000FF] to-[#00FFFF] bg-gradient-to-b'></span>
+                <section className='flex  w-full lg:w-[52%] lg:h-[575px] h-[400px] text-white'>
+                    <span className='w-[69px] h-full from-[#0000FF] to-[#00FFFF] bg-gradient-to-b rounded-l-lg'></span>
                     <div className='w-full h-full flex flex-col gap-4 justify-center px-8'>
                         <h3 className='text-[14px] uppercase'>Sécurité & Surveillance</h3>
                         <h1 className='text-[38px] lg:text-[52px]'>🛡️ L’IA pour une Sécurité et une Surveillance Intelligentes</h1>
                         <p>
                             Nos agents IA avancés analysent en temps réel les flux vidéo, détectent les anomalies et optimisent la gestion des risques. Grâce à l’intelligence prédictive, bénéficiez d’une surveillance proactive et d’une protection renforcée pour prévenir les menaces et sécuriser vos environnements.
                         </p>
-                        <div className='flex gap-6'>
+                        <div className='flex justify-center gap-3 lg:gap-6'>
                             <button className='p-3 px-8 rounded-3xl bg-[#11EEFF] text-black'><span className="mr-2">&#8594;</span>Demander une démonstration</button>
                             <button className='p-3 px-8 rounded-3xl border border-white'>Regarder la vidéo</button>
                         </div>
@@ -94,7 +94,7 @@ const page = () => {
 
             <Slider2 />
 
-            <ListeIndu/>
+            <ListeIndu />
 
         </div>
     )

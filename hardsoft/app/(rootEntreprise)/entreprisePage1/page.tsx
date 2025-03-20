@@ -5,7 +5,7 @@ const page = () => {
     return (
         <div className='w-full'>
             <div
-                className="w-full m-auto max-w-[1300px] h-auto lg:h-[494px] rounded-[15px] mt-[26px] flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-10 lg:gap-4 p-4">
+                className="w-full mt-[150px] m-auto max-w-[1300px] h-auto lg:h-[494px] rounded-[15px] flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-10 lg:gap-4 p-4">
                 {/* <!-- Texte --> */}
                 <div className="w-full lg:w-[45%] lg:px-10 flex flex-col items-center lg:items-start lg:pl-8 text-center lg:text-left">
                     <span className="poppins-light text-[12px]">Entreprises</span>

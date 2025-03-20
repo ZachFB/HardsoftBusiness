@@ -4,10 +4,10 @@ import React from 'react'
 
 const Service = () => {
     return (
-        <div className="w-full overflow-hidden">
-            <div className="px-4">
+        <div className="w-full overflow-hidden mb-20">
+            
                 <div
-                    className="w-full max-w-[1300px] h-auto lg:h-[450px] bg-[#F8F8FC] rounded-[15px] mt-[26px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 p-4">
+                    className="w-full max-w-[1300px] h-auto lg:h-[450px] bg-[#F8F8FC] rounded-[15px] mt-[150px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 py-4">
                     {/* <!-- Texte --> */}
                     <div className="w-full lg:w-[50%] flex flex-col items-center lg:items-start lg:pl-8 text-center lg:text-left">
                         <span className="poppins-light text-[12px]">Services</span>
@@ -21,18 +21,18 @@ const Service = () => {
                             Vous êtes Responsables financiers, investisseurs, et dirigeants cherchant à maximiser le retour sur investissement.
                         </span>
                         <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
-                            <button className="bg-[#0000FF] text-white p-3 px-4 rounded-3xl text-[15px] flex items-center font-light">
-                                <span className="mr-2">&#8594;</span> Demander une démonstration
-                            </button>
-                            <button className="border border-black text-black p-3 px-6 rounded-3xl text-[15px] font-light">Regarder la vidéo</button>
-                        </div>
+                        <button className="bg-[#0000FF] text-white p-3 lg:px-7 lg:w-auto w-[350px] rounded-3xl text-[15px] flex justify-center items-center font-light">
+                            <span className="mr-2">&#8594;</span> Try for free
+                        </button>
+                        <button className="border border-black text-black p-3 px-6 rounded-3xl text-[15px] font-light hidden">Regarder la vidéo</button>
+                    </div>
                     </div>
 
                     {/* <!-- Image --> */}
                     <div className="w-full md:w-[80%] lg:w-[50%] h-[250px] md:h-[350px] lg:h-[450px] lg:rounded-none rounded-[15px] lg:rounded-r-[15px] bg-cover bg-center"
-                        style={{ backgroundImage: `url(/images/heroService3.jpg)` }}></div>
+                        style={{ backgroundImage: `url(/images/heroSer3.jpg)` }}></div>
                 </div>
-            </div>
+         
 
 
             <div className="max-w-full lg:w-full flex justify-center">
@@ -111,9 +111,9 @@ const Service = () => {
 
 
             <div className="w-full flex justify-center">
-                <div className="mt-[84px] lg:w-[1200px] w-full h-auto lg:h-[403px] flex flex-col lg:flex-row items-center">
+                <div className="mt-[84px] w-full h-auto lg:h-[403px] flex flex-col lg:flex-row items-center">
                     <div
-                        className="lg:w-[425px] w-full h-full flex justify-center items-center bg-gradient-to-br from-[#0000FF] to-[#00FFFF] rounded-l-2xl">
+                        className="lg:w-[525px] w-full h-full flex justify-center items-center bg-gradient-to-br from-[#0000FF] to-[#00FFFF] rounded-l-2xl">
                         <section className="w-[350px] h-[250px] bg-center bg-cover rounded-2xl"
                             style={{ backgroundImage: `url(images/baner5.jpg)` }}></section>
                     </div>
@@ -136,12 +136,12 @@ const Service = () => {
 
 
             <div className="w-full flex justify-center">
-                <div className="lg:w-[1201px] mt-[44px] grid grid-cols-1 lg:grid-cols-2 lg:gap-[35px] gap-[50px]">
+                <div className="w-full mt-[44px] grid grid-cols-1 lg:grid-cols-2 lg:gap-[35px] gap-[50px]">
 
                     <div>
                         <div className="relative h-[278px] bg-cover rounded-tr-2xl"
                             style={{ backgroundImage: `url(/images/color5.svg)` }}>
-                            <Image src="/images/image10.jpg" height={428} width={428} className="absolute z-20 top-[37px] rounded-t-2xl right-[0px]" alt="" />
+                            <Image src="/images/ser3.jpg" height={428} width={358} className="absolute z-20 top-[37px] rounded-t-2xl right-[0px]" alt="" />
                         </div>
                         <div
                             className="flex flex-col items-center px-3 lg:px-0 h-auto pb-9 lg:pb-10 w-full border-[#0000004D] border-b border-l border-r rounded-b-[25px]">
@@ -159,7 +159,7 @@ const Service = () => {
                     <div>
                         <div className="relative h-[278px] bg-cover rounded-tr-2xl"
                             style={{ backgroundImage: `url(/images/color6.svg)` }}>
-                            <Image src="/images/image11.jpg" height={400} width={380} className="absolute z-20 top-[25px] rounded-t-2xl right-[0px]" alt="" />
+                            <Image src="/images/ser4.jpg" height={400} width={380} className="absolute z-20 top-[25px] rounded-t-2xl right-[0px]" alt="" />
                         </div>
                         <div
                             className="flex flex-col items-center px-3 lg:px-0 h-auto pb-9 lg:pb-16 w-full border-[#0000004D] border-b border-l border-r rounded-b-[25px]">

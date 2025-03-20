@@ -6,15 +6,15 @@ import React from 'react'
 const page = () => {
     return (
         <div className='w-full'>
-            <div className='w-full flex lg:flex-row flex-col h-auto bg-[#0000FF] py-6 lg:mt-[34px]'>
+            <div className='w-full flex lg:flex-row flex-col h-auto bg-[#0000FF] md:py-0 py-48 mt-[150px] rounded-lg'>
 
-                <section className='flex  w-full lg:w-[52%] h-[575px] text-white'>
-                    <span className='w-[69px] h-[599px] from-[#0000FF] to-[#00FFFF] bg-gradient-to-b'></span>
+                <section className='flex  w-full lg:w-[52%] lg:h-[680px] h-[420px] text-white'>
+                    <span className='w-[69px] h-full from-[#0000FF] to-[#00FFFF] bg-gradient-to-b rounded-l-lg'></span>
                     <div className='w-full h-full flex flex-col gap-4 justify-center px-8'>
                         <h3 className='text-[14px] uppercase'>Énergie & Environnement</h3>
                         <h1 className='text-[38px] lg:text-[52px]'>⚡ Optimisation Énergétique et Gestion Durable grâce à l’IA</h1>
                         <p>Nos agents IA intelligents révolutionnent le secteur de l’énergie et de l’environnement en optimisant la consommation, en prédisant les besoins énergétiques et en améliorant la gestion des ressources. Grâce à l’analyse de données avancée, réduisez le gaspillage, améliorez l’efficacité et favorisez une transition vers un avenir plus durable.</p>
-                        <div className='flex gap-6'>
+                        <div className='flex justify-center gap-3 lg:gap-6'>
                             <button className='p-3 px-8 rounded-3xl bg-[#11EEFF] text-black'><span className="mr-2">&#8594;</span>Demander une démonstration</button>
                             <button className='p-3 px-8 rounded-3xl border border-white'>Regarder la vidéo</button>
                         </div>
@@ -90,7 +90,7 @@ const page = () => {
 
             <Slider2 />
 
-            <ListeIndu/>
+            <ListeIndu />
 
         </div>
     )

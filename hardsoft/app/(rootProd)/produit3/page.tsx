@@ -10,9 +10,9 @@ const Produit = () => {
     return (
         // <!-- Section Hero -->
         <div className="w-full">
-            <div className="px-4">
+            
                 <div
-                    className="w-full max-w-[1300px] h-auto lg:h-[494px] bg-[#F8F8FC] rounded-[15px] mt-[26px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 p-4">
+                    className="w-full h-auto lg:h-[494px] bg-[#F8F8FC] rounded-[15px] mt-[150px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 py-4">
                     {/* <!-- Texte --> */}
                     <div className="w-full lg:w-[50%] flex flex-col items-center lg:items-start lg:pl-8 text-center lg:text-left">
                         <span className="poppins-light text-[12px]">Produits</span>
@@ -24,22 +24,22 @@ const Produit = () => {
                             Optez pour une planification stratégique de vos finances!
                         </span>
                         <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
-                            <button className="bg-[#0000FF] text-white p-3 px-4 rounded-3xl text-[15px] flex items-center font-light">
-                                <span className="mr-2">&#8594;</span> Demander une démonstration
+                            <button className="bg-[#0000FF] text-white p-3 lg:px-7 lg:w-auto w-[350px] rounded-3xl text-[15px] flex justify-center items-center font-light">
+                                <span className="mr-2">&#8594;</span> Try for free
                             </button>
-                            <button className="border border-black text-black p-3 px-6 rounded-3xl text-[15px] font-light">Regarder la vidéo</button>
+                            <button className="border border-black text-black p-3 px-6 rounded-3xl text-[15px] font-light hidden">Regarder la vidéo</button>
                         </div>
                     </div>
 
                     {/* <!-- Image --> */}
-                    <div className="w-full md:w-[80%] lg:w-[50%] h-[250px] md:h-[350px] lg:h-[494px] rounded-r-[15px] bg-cover bg-center"
-                        style={{ backgroundImage: `url(/images/heroProd3.png)` }}></div>
+                    <div className="w-full md:w-[80%] lg:w-[50%] h-[250px] md:h-[350px] lg:h-[494px] lg:rounded-none rounded-[15px] lg:rounded-r-[15px] bg-cover bg-center"
+                        style={{ backgroundImage: `url(/images/heroPro2.png)` }}></div>
                 </div>
-            </div>
+          
 
             <h1 className="mt-[104px] mb-[41px] text-[28px] lg:text-[38px] ml-[68px] font-black">Vous êtes :</h1>
 
-            <div className="w-full lg:h-[488px] px-[87px] border-b border-[#00000026]">
+            <div className="w-full lg:h-[488px] border-b border-[#00000026]">
                 <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-[20px]">
                     <div className="flex flex-col gap-4 py-[20px]">
                         <span className="w-[100px] h-[80px]">

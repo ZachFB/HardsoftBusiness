@@ -12,7 +12,7 @@ const Produit = () => {
         <div className="w-full">
             
                 <div
-                    className="w-full h-auto lg:h-[494px] bg-[#F8F8FC] rounded-[15px] mt-[150px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 py-4">
+                    className="w-full h-auto lg:h-[494px] bg-[#F8F8FC] rounded-[15px] mt-[50px] lg:mt-[150px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 py-4">
                     {/* <!-- Texte --> */}
                     <div className="w-full lg:w-[50%] flex flex-col items-center lg:items-start lg:pl-8 text-center lg:text-left">
                         <span className="poppins-light text-[12px]">Produits</span>

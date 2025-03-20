@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="">
       <div
-        className="w-full h-auto lg:h-[600px] rounded-[15px] mt-[150px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-60">
+        className="w-full h-auto lg:h-[600px] rounded-[15px] mt-[50px] lg:mt-[150px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-60">
         {/* <!-- Texte --> */}
         <div className="w-full lg:w-[50%] flex flex-col items-center lg:items-start text-center lg:text-left">
           <span className="poppins-light text-[12px]"></span>

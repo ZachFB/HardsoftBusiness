@@ -42,9 +42,9 @@ const Navbar: React.FC = () => {
 
   //Rendu
   return (
-    <header className="w-full relative m-auto">
+    <header className="w-full lg:relative m-auto">
     {/* Menu principal */}
-    <div className={`h-[90px] w-[100%] flex items-center justify-between font-medium fixed bg-white top-0 left-1/2 transform -translate-x-1/2 z-40 px-[5vw] ${isScrolled ? "shadow-lg" : ""}`}>
+    <div className={`h-[90px] w-[100%] flex items-center justify-between font-medium lg:fixed bg-white lg:top-0 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:z-40 px-[5vw]  ${isScrolled ? "lg:shadow-lg" : ""}`}>
         <Link href={"/"}>
           <Image src={logo} className="lg:w-[170px] lg:h-[60px] h-[30px] w-[100px]" width={50} height={60} alt="Logo" />
         </Link>
@@ -125,7 +125,7 @@ const Navbar: React.FC = () => {
         </button>
       </div>
       {megaprod && (
-        <div className="fixed top-[80px] left-0 w-full h-auto lg:h-[442px] bg-white shadow-lg rounded-lg p-6 flex justify-center z-40">
+        <div className="lg:fixed absolute top-[80px] left-0 w-full h-auto lg:h-[442px] bg-white shadow-lg rounded-lg p-6 flex justify-center z-40">
           <div className="relative h-auto lg:h-full w-full lg:w-[1202px] grid lg:grid-cols-3 grid-cols-1 lg:justify-items-center md:justify-items-start justify-items-center items-center lg:px-0 md:px-24 gap-[32px]">
 
             {/* Bloc bleu */}
@@ -179,7 +179,7 @@ const Navbar: React.FC = () => {
 
       )}
       {megaserv && (
-        <div className="fixed top-[80px] left-0 w-full h-auto lg:h-[442px] bg-white shadow-lg rounded-lg p-6 flex justify-center items-center z-40">
+        <div className="lg:fixed absolute top-[80px] left-0 w-full h-auto lg:h-[442px] bg-white shadow-lg rounded-lg p-6 flex justify-center items-center z-40">
           <div className="relative h-auto lg:h-full w-full lg:w-[1202px] grid lg:grid-cols-3 grid-cols-1 lg:justify-items-center md:justify-items-start justify-items-center items-center lg:px-0 md:px-24 gap-[32px]">
 
             {/* Bloc bleu */}
@@ -244,7 +244,7 @@ const Navbar: React.FC = () => {
       {megasolut && (
         <div
           id="megaProd"
-          className="fixed top-[80px] left-0 w-full lg:h-[600px] h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-40"
+          className="lg:fixed absolute top-[80px] left-0 w-full lg:h-[600px] h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-40"
         >
           <div className="relative h-auto w-full grid lg:grid-cols-3 grid-cols-1 lg:justify-items-center justify-items-center items-center lg:px-0 gap-[40px]">
             <button
@@ -347,7 +347,7 @@ const Navbar: React.FC = () => {
       {megaIndu && (
         <div
           id="megaProd"
-          className="fixed top-[80px] left-0 overflow-x-hidden w-full h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-40"
+          className="lg:fixed absolute top-[80px] left-0 overflow-x-hidden w-full h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-40"
         >
           <div className="relative h-auto w-full grid lg:grid-cols-4 grid-cols-1 lg:justify-items-center justify-items-center items-center lg:px-0 gap-[40px]">
             <button
@@ -451,7 +451,7 @@ const Navbar: React.FC = () => {
       {megacarr && (
         <div
           id="megaProd"
-          className="fixed top-[80px] left-0 overflow-x-hidden w-full h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-40"
+          className="lg:fixed absolute top-[80px] left-0 overflow-x-hidden w-full h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-40"
         >
           <div className="relative h-auto w-full grid lg:grid-cols-4 grid-cols-1 lg:justify-items-center justify-items-center items-center lg:px-0 gap-[40px]">
             <button
@@ -520,7 +520,7 @@ const Navbar: React.FC = () => {
       {megacomp && (
         <div
           id="megaProd"
-          className="fixed top-[80px] left-0 overflow-x-hidden w-full h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-40"
+          className="lg:fixed absolute top-[80px] left-0 overflow-x-hidden w-full h-auto flex justify-center items-center shadow-lg px-[30px] gap-[40px] transition-all bg-white z-40"
         >
           <div className="relative h-auto w-auto grid lg:grid-cols-4 grid-cols-1 lg:justify-items-center justify-items-center items-center lg:px-0 gap-[90px]">
             <button

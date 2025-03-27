@@ -9,7 +9,7 @@ const page = () => {
     <div className='w-full'>
 
 <div
-                className="w-full m-auto relative h-auto lg:h-[800px] bg-[#F4DDFF] rounded-[15px] mt-[26px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 p-4">
+                className="w-full m-auto relative h-auto lg:h-[800px] bg-[#F4DDFF] rounded-[15px] mt-[50px] lg:mt-[150px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 py-4 lg:px-0 px-2">
                 {/* <!-- Texte --> */}
                 <div className="w-full lg:px-60 px-5 py-6 flex flex-col items-center lg:items-center text-center lg:text-center">
                     <span className="poppins-light text-[12px]">Solutions</span>
@@ -29,11 +29,11 @@ const page = () => {
                             </div>
                     </div>
 
-                    <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                        <button className="bg-[#0000FF] text-white p-3 px-4 rounded-3xl text-[15px] flex items-center font-light">
-                            <span className="mr-2">&#8594;</span> Demander une démonstration
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
+                        <button className="bg-[#0000FF] text-white p-3 lg:px-7 lg:w-auto w-[350px] rounded-3xl text-[15px] flex justify-center items-center font-light">
+                            <span className="mr-2">&#8594;</span> Try for free
                         </button>
-                        <button className="border border-black text-black p-3 px-6 rounded-3xl text-[15px] font-light">Regarder la vidéo</button>
+                        <button className="border border-black text-black p-3 px-6 rounded-3xl text-[15px] font-light hidden">Regarder la vidéo</button>
                     </div>
                 </div>
 

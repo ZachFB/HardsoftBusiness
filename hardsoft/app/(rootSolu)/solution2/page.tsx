@@ -6,7 +6,7 @@ const page = () => {
     return (
         <div className='w-full'>
             <div
-                className="w-full m-auto max-w-[1300px] h-auto lg:h-[494px] bg-[#F8F8FC] rounded-[15px] mt-[26px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 p-4">
+                className="w-full m-auto max-w-[1300px] h-auto lg:h-[494px] bg-[#F8F8FC] rounded-[15px] mt-[50px] lg:mt-[150px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-4 py-4 lg:px-0 px-4">
                 {/* <!-- Texte --> */}
                 <div className="w-full lg:w-[55%] lg:px-10 flex flex-col items-center lg:items-start lg:pl-8 text-center lg:text-left">
                     <span className="poppins-light text-[12px]">Solutions</span>
@@ -18,10 +18,10 @@ const page = () => {
                         Optimisez la Performance de Votre Entreprise à Grande Échelle Réinventez la gestion financière, les prévisions stratégiques et l&#39;alignement opérationnel à travers une solution intégrée conçue pour les grandes entreprises et multinationales.
                     </span>
                     <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
-                        <button className="bg-[#0000FF] text-white p-3 px-4 rounded-3xl text-[15px] flex items-center font-light">
-                            <span className="mr-2">&#8594;</span> Demander une démonstration
+                        <button className="bg-[#0000FF] text-white p-3 lg:px-7 lg:w-auto w-[350px] rounded-3xl text-[15px] flex justify-center items-center font-light">
+                            <span className="mr-2">&#8594;</span> Try for free
                         </button>
-                        <button className="border border-black text-black p-3 px-6 rounded-3xl text-[15px] font-light">Regarder la vidéo</button>
+                        <button className="border border-black text-black p-3 px-6 rounded-3xl text-[15px] font-light hidden">Regarder la vidéo</button>
                     </div>
                 </div>
 
@@ -43,7 +43,7 @@ const page = () => {
 
 
             <div className="w-full flex justify-center">
-                <div className="lg:w-[1201px] w-full mx-3 mt-[44px] grid lg:grid-cols-2 grid-cols-1 gap-[35px]">
+                <div className="lg:w-full w-full mt-[44px] grid lg:grid-cols-2 grid-cols-1 gap-[35px]">
 
                     <div>
                         <div className="relative h-[278px] bg-cover rounded-tr-2xl"
@@ -85,12 +85,12 @@ const page = () => {
 
 
             <div className="w-full flex justify-center">
-                <div className="mt-[52px] w-full lg:w-[1200px] md:w-[95%] lg:h-[403px] h-auto flex items-center">
+                <div className="mt-[52px] w-full lg:w-full md:w-[95%] lg:h-[403px] h-auto flex items-center">
                     <div
                         className="w-full lg:w-[545px] h-full bg-gradient-to-b from-[#0000FF] to-[#00FFFF] flex justify-end border-t border-l border-b border-[#0000004D] rounded-l-2xl">
                     </div>
                     <div
-                        className="w-full lg:w-[650px] px-2 lg:px-0 h-full lg:py-0 py-8 border-[#0000004D] border-r border-t border-b rounded-r-3xl flex justify-center items-center">
+                        className="w-full lg:w-[750px] px-2 lg:px-0 h-full lg:py-0 py-8 border-[#0000004D] border-r border-t border-b rounded-r-3xl flex justify-center items-center">
                         <section className="w-full lg:w-[487px] h-auto flex flex-col justify-center">
                             <h1 className="poppins-semibold text-[20px] font-black lg:text-[32px]">Gestion des Ressources Humaines à Grande Échelle                                </h1>
                             <p className="w-full lg:w-[551px] text-[16px] poppins-light leading-[19.2px] mt-[20px]">
@@ -178,7 +178,7 @@ const page = () => {
 
 
 
-            <div className=' py-16 h-auto lg:mt-[154px] mt-[90] bg-[#F8F8FC]'>
+            <div className='w-full py-16 h-auto lg:mt-[154px] mt-[90] bg-[#F8F8FC]'>
                 <div className='lg:w-[833px] lg:ml-[80px] w-full space-y-2'>
                     <h1 className="poppins-semibold lg:text-[40px] text-[30px] text-center lg:text-left leading-[48px] font-black">
                         Fonctionnalités Clés pour les Grandes Entreprises
@@ -189,12 +189,12 @@ const page = () => {
                 </div>
 
                 <div className="w-full flex justify-center">
-                    <div className="mt-[52px] w-full lg:w-[1200px] h-[403px] flex items-center">
+                    <div className="mt-[52px] w-full lg:w-full h-[403px] flex items-center">
                         <div
                             className="w-full lg:w-[545px] h-full bg-gradient-to-b from-[#0000FF] to-[#00FFFF] flex justify-end border-t border-l border-b border-[#0000004D] rounded-l-2xl">
                         </div>
                         <div
-                            className="w-full lg:w-[650px] px-2 lg:px-0 h-full border-[#0000004D] border-r border-t border-b rounded-r-3xl flex justify-center items-center">
+                            className="w-full lg:w-[750px] px-2 lg:px-0 h-full border-[#0000004D] border-r border-t border-b rounded-r-3xl flex justify-center items-center">
                             <section className="w-full lg:w-[487px] flex flex-col justify-center">
                                 <h1 className="poppins-semibold text-[20px] font-black lg:text-[32px]">Consolidation Multi-Entités</h1>
                                 <p className="w-full lg:w-[551px] text-[16px] poppins-light leading-[19.2px] mt-[20px]">
@@ -206,7 +206,7 @@ const page = () => {
                 </div>
 
                 <div className="w-full flex justify-center">
-                    <div className="lg:w-[1201px] w-full mx-3 mt-[44px] grid lg:grid-cols-2 grid-cols-1 gap-[35px]">
+                    <div className="lg:w-full w-full mt-[44px] grid lg:grid-cols-2 grid-cols-1 gap-[35px]">
 
                         <div>
                             <div className="relative h-[278px] bg-cover rounded-tr-2xl"
@@ -244,12 +244,12 @@ const page = () => {
                 </div>
 
                 <div className="w-full flex justify-center">
-                    <div className="mt-[52px] w-full lg:w-[1200px] h-[403px] flex items-center">
+                    <div className="mt-[52px] w-full lg:w-full h-[403px] flex items-center">
                         <div
                             className="w-full lg:w-[545px] h-full bg-gradient-to-b from-[#0000FF] to-[#00FFFF] flex justify-end border-t border-l border-b border-[#0000004D] rounded-l-2xl">
                         </div>
                         <div
-                            className="w-full lg:w-[650px] px-2 lg:px-0 h-full border-[#0000004D] border-r border-t border-b rounded-r-3xl flex justify-center items-center">
+                            className="w-full lg:w-[750px] px-2 lg:px-0 h-full border-[#0000004D] border-r border-t border-b rounded-r-3xl flex justify-center items-center">
                             <section className="w-full lg:w-[487px] flex flex-col justify-center">
                                 <h1 className="poppins-semibold text-[20px] font-black lg:text-[32px]">Rapports Personnalisés et Tableaux de Bord Dynamiques</h1>
                                 <p className="w-full lg:w-[551px] text-[16px] poppins-light leading-[19.2px] mt-[20px]">
@@ -276,12 +276,12 @@ const page = () => {
             <div className="h-auto w-full pt-[40px]">
 
                 <div className="w-full flex justify-center">
-                    <div className="w-full lg:w-[1200px] h-[300px] flex items-center">
+                    <div className="w-full lg:w-full h-[300px] flex items-center">
                         <div
-                            className="w-64 md:w-[600px] lg:w-[580px] h-full bg-gradient-to-b from-[#0000FF] to-[#00FFFF] flex justify-end lg:rounded-2xl rounded-r-2xl">
+                            className="w-64 md:w-[600px] lg:w-[580px] h-full bg-gradient-to-b from-[#0000FF] to-[#00FFFF] flex justify-end rounded-2xl">
                         </div>
                         <div
-                            className="lg:w-[620px] w-full h-full flex justify-center items-center">
+                            className="lg:w-[720px] w-full h-full flex justify-center items-center">
                             <section className="lg:w-[466px] lg:px-0 px-3 flex flex-col justify-center">
                                 <h1 className="poppins-semibold text-[32px] font-black">Étude de Cas 1 : </h1>
                                 <p className="w-full text-[16px] poppins-light leading-[19.2px] mt-[20px]">
@@ -293,9 +293,9 @@ const page = () => {
                 </div>
 
                 <div className="w-full flex justify-center">
-                    <div className="mt-[41px] w-full lg:w-[1200px] h-[300px] flex items-center">
+                    <div className="mt-[41px] w-full lg:w-full h-[300px] flex items-center">
                         <div
-                            className="lg:w-[620px] w-full h-full flex justify-center items-center">
+                            className="lg:w-[720px] w-full h-full flex justify-center items-center">
                             <section className="lg:w-[466px] w-full lg:px-0 px-3 flex flex-col justify-center">
                                 <h1 className="poppins-semibold text-[32px] font-black">Étude de Cas 2 :</h1>
                                 <p className="w-full text-[16px] poppins-light leading-[19.2px] mt-[20px]">
@@ -304,18 +304,18 @@ const page = () => {
                             </section>
                         </div>
                         <div
-                            className="w-64 md:w-[600px] lg:w-[580px] h-full bg-gradient-to-b from-[#0000FF] to-[#00FFFF] flex justify-end lg:rounded-2xl rounded-l-2xl">
+                            className="w-64 md:w-[600px] lg:w-[580px] h-full bg-gradient-to-b from-[#0000FF] to-[#00FFFF] flex justify-end rounded-2xl">
                         </div>
                     </div>
                 </div>
 
                 <div className="w-full flex justify-center">
-                    <div className="mt-[41px] w-full lg:w-[1200px] h-[300px] flex items-center">
+                    <div className="mt-[41px] w-full lg:w-full h-[300px] flex items-center">
                         <div
-                            className="w-64 md:w-[600px] lg:w-[580px] h-full bg-gradient-to-b from-[#0000FF] to-[#00FFFF] flex justify-end lg:rounded-2xl rounded-r-2xl">
+                            className="w-64 md:w-[600px] lg:w-[580px] h-full bg-gradient-to-b from-[#0000FF] to-[#00FFFF] flex justify-end rounded-2xl">
                         </div>
                         <div
-                            className="lg:w-[620px] w-full flex justify-center items-center">
+                            className="lg:w-[720px] w-full flex justify-center items-center">
                             <section className="lg:w-[466px] w-full lg:px-0 px-3 flex flex-col justify-center">
                                 <h1 className="poppins-semibold text-[32px] font-black">Témoignage :</h1>
                                 <p className="w-full text-[16px] poppins-light leading-[19.2px] mt-[20px]">
@@ -330,7 +330,7 @@ const page = () => {
 
 
             <div className="mt-[167px] w-full lg:block hidden">
-                <div className="lg:w-[1200px] h-auto bg-[#0000FF] m-auto rounded-[20px]">
+                <div className="lg:w-full h-auto bg-[#0000FF] m-auto rounded-[20px]">
                     <div className="lg:w-[981px] flex flex-col lg:flex-row py-[70px] mx-auto gap-[159px]">
                         <div className="flex flex-col w-full text-white">
                             <h1 className="lg:w-[521px] text-[28px] px-3 lg:px-0 lg:text-[40px] font-black leading-[48px] lg:text-justify">
@@ -349,7 +349,7 @@ const page = () => {
             </div>
 
 
-            <div className=' py-16 h-auto flex justify-center lg:mt-[154px] px-3 mt-[90] bg-[#F8F8FC]'>
+            <div className='w-full py-16 h-auto flex justify-center lg:mt-[154px] px-3 mt-[90] bg-[#F8F8FC]'>
             <div className='lg:w-[950px] w-full space-y-8'>
                     <h1 className="poppins-semibold lg:text-[40px] text-[30px] text-center leading-[48px] font-black">
                        Libérez le Potentiel de Votre Multinationale avec

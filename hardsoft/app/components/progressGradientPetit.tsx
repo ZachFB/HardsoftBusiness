@@ -43,7 +43,7 @@ const ProgressGradient = () => {
     }, []);
 
     return (
-        <section className="lg:w-[250px] w-full h-[253px] lg:flex lg:flex-row flex-row justify-end hidden">
+        <section className="lg:w-[250px] w-full h-[269px] lg:flex lg:flex-row flex-row justify-end hidden">
             <div 
                 className="relative w-full lg:w-[74px] progress-container h-full bg-[#0000FF] overflow-hidden"
                 ref={el => progressContainersRef.current[0] = el}

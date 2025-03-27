@@ -19,7 +19,7 @@ const Produit = () => {
                         <span className="poppins-light text-[12px]">Produits</span>
                         <span
                             className="lg:mt-8 mt-4 text-[30px] font-semibold lg:text-[40px] bg-gradient-to-r from-[#0000FF] to-[#00FFFF] bg-clip-text text-transparent leading-[38px] lg:leading-[48px]">
-                            Investment Performance Management
+                            Investment AI-driven Management
                         </span>
                         <span className="mt-[20px] lg:mt-[40px] text-[18px] lg:text-[23px] text-[#494949] font-medium">
                             Optez pour une planification stratégique de vos investissements !

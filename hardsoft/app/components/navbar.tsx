@@ -137,15 +137,15 @@ const Navbar: React.FC = () => {
                 {/* Première ligne */}
                 <a href="/produit2" className="flex items-center lg:pb-[49px] gap-3">
                   <Image src="/images/megaIcon1.svg" width={36} height={36} alt="" />
-                  <span className="poppins-light text-[15px]">Enterprise Performance Commercial</span>
+                  <span className="poppins-light text-[15px]">Enterprise AI-driven Commercial</span>
                 </a>
                 <a href="produit3" className="flex items-center lg:pb-[49px] gap-3">
                   <Image src="/images/megaIcon2.svg" width={36} height={36} alt="" />
-                  <span className="poppins-light text-[15px]">Financial Performance Management</span>
+                  <span className="poppins-light text-[15px]">Financial AI-driven Management</span>
                 </a>
                 <a href="/produit1" className="flex items-center lg:pb-[49px] gap-3">
                   <Image src="/images/megaIcon3.svg" width={36} height={36} alt="" />
-                  <span className="poppins-light text-[15px]">Investment Performance Management</span>
+                  <span className="poppins-light text-[15px]">Investment AI-driven Management</span>
                 </a>
 
                 {/* Ligne de séparation au centre */}
@@ -154,15 +154,15 @@ const Navbar: React.FC = () => {
                 {/* Deuxième ligne */}
                 <a href="produit4" className="flex items-center lg:pt-[49px] gap-3">
                   <Image src="/images/megaIcon4.svg" width={36} height={36} alt="" />
-                  <span className="poppins-light text-[15px]">Supply Chain Performance</span>
+                  <span className="poppins-light text-[15px]">Supply Chain AI-driven Management</span>
                 </a>
                 <a href="produit5" className="flex items-center lg:pt-[49px] gap-3">
                   <Image src="/images/megaIcon5.svg" width={36} height={36} alt="" />
-                  <span className="poppins-light text-[15px]">Production Performance Management</span>
+                  <span className="poppins-light text-[15px]">Production AI-driven Management</span>
                 </a>
                 <a href="produit6" className="flex items-center gap-3 lg:pt-[49px]">
                   <Image src="/images/megaIcon6.svg" width={36} height={36} alt="" />
-                  <span className="poppins-light text-[15px]">Enterprise Performance Innovation</span>
+                  <span className="poppins-light text-[15px]">Enterprise AI-driven Innovation</span>
                 </a>
               </div>
             </div>
@@ -255,7 +255,7 @@ const Navbar: React.FC = () => {
             </button>
 
             {/* Bloc 1 */}
-            <div className="h-[440px] w-[410px] flex flex-col items-center gap-[40px]">
+            <div className="h-[440px] w-[410px] flex flex-col items-center gap-[20px]">
               <div
                 className="h-[238px] w-[260px] md:w-[370px] bg-center bg-no-repeat pt-[53px] rounded-[20px]"
                 style={{ backgroundImage: "url('images/color7.svg')" }}
@@ -279,7 +279,7 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Bloc 2 */}
-            <div className="h-[440px] w-[410px] flex flex-col items-center gap-[40px]">
+            <div className="h-[440px] w-[410px] flex flex-col items-center gap-[20px]">
               <div
                 className="h-[238px] w-[260px] md:w-[370px] bg-center bg-no-repeat pt-[53px] rounded-[20px]"
                 style={{ backgroundImage: "url('images/color7.svg')" }}
@@ -303,7 +303,7 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Bloc 3 */}
-            <div className="h-[440px] w-[410px] flex flex-col items-center gap-[40px]">
+            <div className="h-[440px] w-[410px] flex flex-col items-center gap-[20px]">
               <div
                 className="h-[238px] w-[260px] md:w-[370px] bg-center bg-no-repeat pt-[53px] rounded-[20px]"
                 style={{ backgroundImage: "url('images/color7.svg')" }}
@@ -328,7 +328,7 @@ const Navbar: React.FC = () => {
 
 
             {/* Bloc final */}
-            <div className="bg-[#0000FF] flex md:gap-[20px] gap-2 items-center w-full lg:w-[1250px] lg:ml-[25px] ml-0 lg:h-[84.43px] h-auto text-white rounded-[10px] m-auto">
+            <div className="bg-[#0000FF] flex md:gap-[20px] gap-2 items-center w-full lg:w-[1250px] lg:ml-[25px] ml-0 lg:h-[84.43px] h-auto text-white rounded-[10px] mt-[-40px] m-auto">
               <span className="ml-[30px] text-[16px] poppins-semibold">Our solutions</span>
               <p><i className="fa-solid fa-arrow-right"></i></p>
               <span className="text-[14px] poppins-light mr-auto">Explore our industry-leading hardsoft</span>

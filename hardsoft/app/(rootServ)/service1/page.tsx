@@ -218,7 +218,7 @@ const Service = () => {
             </div>
 
             <div className="w-full flex justify-center">
-                <div className="mt-[84px] w-full lg:w-[1200px] lg:h-[400px] lg:shadow-transparent shadow-lg h-auto flex flex-col lg:flex-row items-center">
+                <div className="mt-[84px] w-full lg:w-full lg:h-[400px] lg:shadow-transparent shadow-lg h-auto flex flex-col lg:flex-row items-center">
                     <section className="lg:w-[425px] w-full lg:h-full h-[400px]" style={{ backgroundImage: `url(/images/baner1.svg)` }}></section>
                     <div
                         className="lg:w-[775px] h-[395px] w-full border border-[#0000004D] border-l-none rounded-r-3xl flex justify-center items-center">
@@ -234,7 +234,7 @@ const Service = () => {
             </div>
 
             <div className="w-full flex justify-center">
-                <div className="lg:w-[1201px] mt-[44px] grid grid-cols-1 lg:grid-cols-2 gap-[35px]">
+                <div className="w-full mt-[44px] grid grid-cols-1 lg:grid-cols-2 gap-[35px]">
 
                     <div>
                         <div className="relative h-[278px] bg-cover rounded-tr-2xl"
@@ -319,7 +319,7 @@ const Service = () => {
             </div>
 
             <div className="mt-[167px] w-full lg:block hidden">
-                <div className="lg:w-[1200px] h-[670px] bg-[#0000FF] m-auto rounded-[20px]">
+                <div className="lg:w-full h-[670px] bg-[#0000FF] m-auto rounded-[20px]">
                     <div className="lg:w-[981px] flex flex-col lg:flex-row pt-[100px] mx-auto gap-[159px]">
                         <div className="flex flex-col w-full text-white">
                             <h1 className="lg:w-[521px] text-[28px] px-3 lg:px-0 lg:text-[40px] font-black leading-[48px] lg:text-justify">

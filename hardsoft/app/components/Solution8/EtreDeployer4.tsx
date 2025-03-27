@@ -20,7 +20,7 @@ const DeploymentSection4 = () => {
 
             <div className="mt-[79px] lg:h-auto">
                 <section className="flex flex-col lg:flex-row">
-                    <div className="hidden lg:block w-[49px] h-[220px] border border-[#00000026] border-b border-r border-t"></div>
+                    {/* <div className="hidden lg:block w-[49px] h-[220px] border border-[#00000026] border-b border-r border-t"></div> */}
 
                     {deploymentOptions.slice(0, 3).map((option, index) => (
                         <DeploymentCard key={index} icon={option.icon} text={option.text} />
@@ -32,7 +32,7 @@ const DeploymentSection4 = () => {
                         </section>
                     </div>
 
-                    <div className="hidden lg:block w-[49px] h-[220px] border border-[#00000026] border-b border-l border-t"></div>
+                    {/* <div className="hidden lg:block w-[49px] h-[220px] border border-[#00000026] border-b border-l border-t"></div> */}
                 </section>
 
             </div>
@@ -47,7 +47,7 @@ const DeploymentCard = ({ icon, text }: { icon: string; text: string }) => {
                 <span className="w-[100px] h-[80px] mb-[20px] bg-white z-30">
                     <Image src={icon} width={100} height={80} alt="Icon" className="m-auto mt-2 h-20 w-20" />
                 </span>
-                <p className="text-[16px] ml-[10px]">{text}</p>
+                <p className="text-[16px] px-6 md:px-0">{text}</p>
             </section>
         </div>
     );

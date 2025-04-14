@@ -10,10 +10,11 @@ import MultiCardSlider5 from "./components/MultiCardSlider5";
 import MultiCardSlider6 from "./components/MultiCardSlider6";
 import MultiCardSlider7 from "./components/MultiCardSlider7";
 import MultiCardSlider8 from "./components/MultiCardSlider8";
+import PlanTarifaire from "./components/planTarifaire";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="w-full">
       <div
         className="w-full h-auto lg:h-[400px] rounded-[15px] mt-[50px] lg:mt-[200px] flex flex-col lg:flex-row items-center gap-4 md:gap-10 lg:gap-16">
         {/* <!-- Texte --> */}
@@ -342,47 +343,47 @@ export default function Home() {
       </div>
 
 
-      <div className="mt-[122px] w-full h-auto flex flex-col gap-20">
+      <div className="mt-[122px] w-full h-auto flex flex-col items-center gap-20">
         <h1 className="text-[30px]">Comment les agents IA communiquent-il avec vous dans votre organisation ?</h1>
-        <div className="flex lg:flex-row flex-col gap-6">
+        <div className="w-full flex lg:flex-row flex-col justify-center items-center gap-6">
           <Image src="/images/animationAcc.gif" alt="alt" className="rounded-xl" width={600} height={500} />
-          <section className="w-full flex lg:justify-end items-center">
+          <section className="w-full flex lg:justify-end justify-center items-center">
             <div className="w-[550px] flex flex-col justify-center gap-3 h-full">
               <h2 className="text-[34px]">Connecter.</h2>
               <p className="text-[16px]">Intégrez rapidement les données des processus métier hébergées dans le cloud grâce à des connecteurs intégrés, facilitant ainsi la connectivité des agents intelligents et la visualisation des indicateurs à l’échelle d’un ou plusieurs blocs de votre organisation.</p>
             </div>
           </section>
         </div>
-        <div className="flex lg:flex-row-reverse flex-col gap-6">
+        <div className="w-full flex lg:flex-row-reverse flex-col justify-center items-center gap-6">
           <Image src="/images/imgb2.png" alt="alt" className="rounded-xl" width={600} height={500} />
-          <section className="w-full flex items-center">
+          <section className="w-full flex justify-center items-center">
             <div className="w-[550px] flex flex-col justify-center gap-3 h-full">
               <h2 className="text-[34px]">Comprendre.</h2>
               <p className="text-[16px]">Les agents intelligents comprenant la logique de votre business, analysent vos processus pour produire une visualisation claire, modélisent le parcours idéal et identifient les écarts associés, vous permettant d’effectuer un diagnostic à différents niveaux de granularité.</p>
             </div>
           </section>
         </div>
-        <div className="flex lg:flex-row flex-col gap-6">
+        <div className="w-full flex lg:flex-row flex-col justify-center items-center gap-6">
           <Image src="/images/animationAcc2.gif" alt="alt" className="rounded-xl" width={600} height={500} />
-          <section className="w-full flex lg:justify-end items-center">
+          <section className="w-full flex lg:justify-end justify-center items-center">
             <div className="w-[550px] flex flex-col justify-center gap-3 h-full">
               <h2 className="text-[34px]">Agir.</h2>
               <p className="text-[16px]">L’orchestration des processus permet aux agents intelligents de vous faire passer à l’action en recommandant des solutions pour résoudre les inefficacités et corriger les problèmes à la source, tout en maintenant la synchronisation de vos systèmes.</p>
             </div>
           </section>
         </div>
-        <div className="flex lg:flex-row-reverse flex-col gap-6">
+        <div className="w-full flex lg:flex-row-reverse flex-col justify-center items-center gap-6">
           <Image src="/images/imgb4.png" alt="alt" className="rounded-xl" width={600} height={500} />
-          <section className="w-full flex items-center">
+          <section className="w-full flex justify-center items-center">
             <div className="w-[550px] flex flex-col justify-center gap-3 h-full">
               <h2 className="text-[34px]">Automatiser.</h2>
               <p className="text-[16px]">Optimisez en continu vos processus grâce à la mise en place de déclencheurs personnalisés (email, sms, formulaire, appel, ….), permettant aux agents intelligents de lancer automatiquement des actions à différentes étapes, lorsque des jalons sont atteints ou que des seuils sont dépassés.</p>
             </div>
           </section>
         </div>
-        <div className="flex lg:flex-row flex-col gap-6">
+        <div className="w-full flex lg:flex-row flex-col justify-center items-center gap-6">
           <Image src="/images/animationAcc3.gif" alt="alt" className="rounded-xl" width={600} height={500} />
-          <section className="w-full flex lg:justify-end items-center">
+          <section className="w-full flex lg:justify-end justify-center items-center">
             <div className="w-[550px] flex flex-col justify-center gap-3 h-full">
               <h2 className="text-[34px]">Monitorer.</h2>
               <p className="text-[16px]">Suivez en temps réel l’état de vos processus, les performances des agents intelligents et l’évolution des indicateurs clés. Cette supervision continue permet d’anticiper les anomalies, de documenter les actions entreprises et d’ajuster vos stratégies opérationnelles avec précision. </p>
@@ -391,6 +392,9 @@ export default function Home() {
         </div>
 
       </div>
+
+
+      <PlanTarifaire/>
 
 
       {/* <!-- Accordeon HTML TAILWIND CSS  --> */}
@@ -402,7 +406,7 @@ export default function Home() {
           <span className="text-[20px] poppins-semibold">Questions Fréquemment Posées</span>
         </div>
         <div className="grid divide-y divide-neutral-200 max-w-4xl mx-auto mt-8">
-          <div className="bg-[#F8F8FC] rounded-2xl py-6 px-5 border border-[#00000033]">
+          <div className="bg-[#9B0069] text-white rounded-2xl py-6 px-5 border border-[#00000033]">
             <details className="group">
               <summary className="flex justify-between items-center cursor-pointer list-none">
                 <span className="text-[20px] poppins-semibold"> &#34;Que sont les agents d'IA ?&#34;</span>
@@ -411,13 +415,13 @@ export default function Home() {
                   </svg>
                 </span>
               </summary>
-              <p className="text-neutral-600 mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
+              <p className="text-white mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
               Un agent d'intelligence artificielle (IA) est un logiciel capable d'interagir avec son environnement, de collecter des données et de les utiliser pour accomplir des tâches de manière autonome afin d'atteindre des objectifs prédéterminés. Les humains définissent les objectifs, mais l'agent d'IA choisit indépendamment les actions à réaliser pour les atteindre. Par exemple, un agent d'IA dans un centre d'appels pourrait poser automatiquement des questions aux clients, rechercher des informations dans des bases de données et proposer des solutions. Selon les réponses des clients, l'agent peut décider de résoudre le problème lui-même ou de le transmettre à un humain.
               <p className="mt-3">L'IA agentique permet à ces agents de s'adapter, d'apprendre et d'optimiser les processus en toute autonomie, dépassant ainsi les simples automatismes pour prendre des décisions complexes et collaborer avec les équipes humaines.</p>
               </p>
             </details>
           </div>
-          <div className="bg-[#F8F8FC] rounded-2xl py-6 px-5 border border-[#00000033] mt-4">
+          <div className="bg-[#9B0069] text-white rounded-2xl py-6 px-5 border border-[#00000033] mt-4">
             <details className="group">
               <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
                 <span className="text-[20px] poppins-semibold"> &#34;Quels sont les principes clés qui définissent les agents d'IA ?&#34;</span>
@@ -426,12 +430,12 @@ export default function Home() {
                   </svg>
                 </span>
               </summary>
-              <p className="text-neutral-600 mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
+              <p className="text-white mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
               Les agents intelligents accomplissent des tâches de manière autonome, mais ce qui rend les agents d'IA uniques, c'est leur capacité à prendre des décisions rationnelles basées sur des perceptions et des données en temps réel. Ils utilisent des interfaces physiques ou logicielles pour détecter leur environnement, le comprendre et agir afin de maximiser les performances de l’entreprise et atteindre ses objectifs. 
               </p>
             </details>
           </div>
-          <div className="bg-[#F8F8FC] rounded-2xl py-6 px-5 border border-[#00000033] mt-4">
+          <div className="bg-[#9B0069] text-white rounded-2xl py-6 px-5 border border-[#00000033] mt-4">
             <details className="group">
               <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
                 <span className="text-[20px] poppins-semibold"> &#34;Quels sont les avantages de l'utilisation des agents d'IA ?&#34;</span>
@@ -440,7 +444,7 @@ export default function Home() {
                   </svg>
                 </span>
               </summary>
-              <p className="text-neutral-600 mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
+              <p className="text-white mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
               Les agents d'IA améliorent à la fois l'efficacité des opérations et l'expérience client.
               <p className="font-semibold mt-3">Amélioration de la productivité</p>
               Les agents d'IA automatisent des tâches répétitives, ce qui permet aux équipes de se concentrer sur des activités à plus forte valeur ajoutée, améliorant ainsi leur productivité.
@@ -457,7 +461,7 @@ export default function Home() {
               </p>
             </details>
           </div>
-          <div className="bg-[#F8F8FC] rounded-2xl py-6 px-5 border border-[#00000033] mt-4">
+          <div className="bg-[#9B0069] text-white rounded-2xl py-6 px-5 border border-[#00000033] mt-4">
             <details className="group">
               <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
                 <span className="text-[20px] poppins-semibold"> &#34;En quoi les agents intelligents diffèrent-ils des simples chatbots ?&#34;</span>
@@ -466,12 +470,12 @@ export default function Home() {
                   </svg>
                 </span>
               </summary>
-              <p className="text-neutral-600 mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
+              <p className="text-white mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
               Contrairement aux chatbots traditionnels, qui suivent des scénarios préétablis, les agents IA offrent une interaction plus naturelle et flexible. Ils automatisent des conversations complexes en s'intégrant aux systèmes d'entreprise et en tirant parti de l'IA pour fournir des réponses contextuelles adaptées aux besoins spécifiques.
               </p>
             </details>
           </div>
-          <div className="bg-[#F8F8FC] rounded-2xl py-6 px-5 border border-[#00000033] mt-4">
+          <div className="bg-[#9B0069] text-white rounded-2xl py-6 px-5 border border-[#00000033] mt-4">
             <details className="group">
               <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
                 <span className="text-[20px] poppins-semibold"> &#34;Sur quels canaux de communication les agents peuvent-ils être déployés ?&#34;</span>
@@ -480,12 +484,12 @@ export default function Home() {
                   </svg>
                 </span>
               </summary>
-              <p className="text-neutral-600 mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
+              <p className="text-white mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
               Nos agents peuvent être déployés sur de multiples canaux de communication, notamment les sites web, les applications mobiles et les principales plateformes de messagerie comme WhatsApp, Facebook Messenger, Google Chat, WeChat, Microsoft Teams, ainsi que par SMS, email, ou via des intégrations API avec des systèmes téléphoniques et vocaux.
               </p>
             </details>
           </div>
-          <div className="bg-[#F8F8FC] rounded-2xl py-6 px-5 border border-[#00000033] mt-4">
+          <div className="bg-[#9B0069] text-white rounded-2xl py-6 px-5 border border-[#00000033] mt-4">
             <details className="group">
               <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
                 <span className="text-[20px] poppins-semibold"> &#34;Les données clients sont-elles utilisées pour entraîner les agents IA ?&#34;</span>
@@ -494,12 +498,12 @@ export default function Home() {
                   </svg>
                 </span>
               </summary>
-              <p className="text-neutral-600 mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
+              <p className="text-white mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
               Les modèles que nous développons sont entraînés à partir de données contextuelles et des meilleures pratiques métier. Les données des clients sont strictement confidentielles et isolées. Aucune donnée n’est stockée ni utilisée à des fins d’apprentissage sauf à la demande du client souhaitant des agents autonomes entraînés à faire des analyses avancées.           
               </p>
             </details>
           </div>
-          <div className="bg-[#F8F8FC] rounded-2xl py-6 px-5 border border-[#00000033] mt-4">
+          <div className="bg-[#9B0069] text-white rounded-2xl py-6 px-5 border border-[#00000033] mt-4">
             <details className="group">
               <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
                 <span className="text-[20px] poppins-semibold"> &#34;Les utilisateurs peuvent-ils donner leur avis sur les réponses de l’IA ?&#34;</span>
@@ -508,13 +512,13 @@ export default function Home() {
                   </svg>
                 </span>
               </summary>
-              <p className="text-neutral-600 mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
+              <p className="text-white mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
               Un système de feedback simple — via des pouces levés ou baissés — est prévu pour permet à chaque utilisateur d’évaluer la pertinence des réponses.
               <p className="mt-3">Ces retours sont essentiels pour détecter les imprécisions (ou hallucinations) et améliorer en continu les performances des agents.</p>
               </p>
             </details>
           </div>
-          <div className="bg-[#F8F8FC] rounded-2xl py-6 px-5 border border-[#00000033] mt-4">
+          <div className="bg-[#9B0069] text-white rounded-2xl py-6 px-5 border border-[#00000033] mt-4">
             <details className="group">
               <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
                 <span className="text-[20px] poppins-semibold"> &#34;Comment est garantie l’exactitude des recommandations des agents IA ?&#34;</span>
@@ -523,7 +527,7 @@ export default function Home() {
                   </svg>
                 </span>
               </summary>
-              <p className="text-neutral-600 mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
+              <p className="text-white mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
               Bien que nos agents s’appuient sur des algorithmes puissants et des sources fiables, **aucune recommandation n’est garantie à 100 %**.
               <p className="mt-3">Ils sont conçus pour assister, non remplacer, le jugement humain.</p>
               <p className="mt-3">Les utilisateurs gardent le contrôle :</p>
@@ -533,7 +537,7 @@ export default function Home() {
               </p>
             </details>
           </div>
-          <div className="bg-[#F8F8FC] rounded-2xl py-6 px-5 border border-[#00000033] mt-4">
+          <div className="bg-[#9B0069] text-white rounded-2xl py-6 px-5 border border-[#00000033] mt-4">
             <details className="group">
               <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
                 <span className="text-[20px] poppins-semibold"> &#34;Que peut vous apportez HardSoft Business ?&#34;</span>
@@ -542,7 +546,7 @@ export default function Home() {
                   </svg>
                 </span>
               </summary>
-              <p className="text-neutral-600 mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
+              <p className="text-white mt-3 group-open:animate-fadeIn poppins-light text-[16px]">
               HardSoft Business édite des applications conversationnelles d’entreprise AI-driven personnalisées offrant un espace de travail numérique adaptatifs, où clients, actionnaires, cadres d’entreprises, employés et clients collaborent avec des agents intelligents et autonomes pour une meilleure planification stratégique. Avec des agents IA disponibles 24h/24 et 7j/7, de nouvelles briques de fonctionnalités de l’application conversationnelle peuvent être déployées et mis à jour très rapidement dans un cloud sécurisé, optimisant ainsi le retour sur investissement de vos décisions stratégiques. Ces applications combinent une IA conversationnelle avancée, la génération des tableaux de bord d’analyses stratégiques, des capacités d’automatisation complexes et une connectivité plus ou moins intégrée à l’organisation de votre entreprise.
               <p className="mt-3">
               <span className="font-semibold">Les avantages : </span>Aider votre entreprise à progressivement avoir une transparence et clarté dans ses procédures, améliorer vos services et produits, vous identifier des axes de croissance, régler des problèmes complexes avec moins d'intervention humaine, prendre très rapidement des décisions stratégiques et tactiques, d'automatiser des processus à l’aide de collègues virtuels à vos collaborateurs afin que ces derniers puissent consacrer leurs temps sur des activités à plus forte valeur ajoutée.

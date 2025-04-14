@@ -43,10 +43,15 @@ const Navbar: React.FC = () => {
   //Rendu
   return (
     <header className="w-full lg:relative m-auto">
+      
     {/* Menu principal */}
-    <div className={`h-[90px] w-[100%] flex items-center justify-between font-medium lg:fixed bg-white lg:top-0 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:z-40 px-[5vw]  ${isScrolled ? "lg:shadow-lg" : ""}`}>
+    <div className={`flex flex-col font-medium lg:fixed bg-white lg:top-0 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:z-40 ${isScrolled ? "lg:shadow-lg" : ""}`}>
+    <div className=" w-screen h-[10px] py-4 bg-[#9B0069] text-white z-10 flex flex-col items-center justify-center">
+      ⚠️ Ce site est actuellement en cours de développement.
+      </div>
+      <div className="h-[90px] w-[100%] flex items-center justify-between px-[5vw]">
         <Link href={"/"}>
-          <Image src={logo} className="lg:w-[170px] lg:h-[60px] h-[30px] w-[100px]" width={50} height={60} alt="Logo" />
+          <Image src={logo} className="lg:w-[170px] lg:h-[60px] h-[30px] w-[100px] ml-[6px]" width={50} height={60} alt="Logo" />
         </Link>
         {/* Menu Desktop */}
         <nav className="hidden lg:flex w-full max-w-[900px] h-[47px] ml-auto items-center justify-between">
@@ -114,7 +119,7 @@ const Navbar: React.FC = () => {
             ))}
           </ul>
           <div className="flex items-center gap-[20px]">
-            <button className="w-[140px] h-[47px] bg-[#0000FF] text-white rounded-3xl ">Try for free</button>
+            <button className="w-[140px] h-[47px] bg-[#0000FF] text-white rounded-3xl mr-[5px]">Try for free</button>
           </div>
 
         </nav>
@@ -640,8 +645,10 @@ const Navbar: React.FC = () => {
               </li>
             ))}
           </ul>
+          
         </div>
       )}
+     </div>
     </header>
   );
 };

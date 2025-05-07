@@ -19,6 +19,10 @@ const eslintConfig = [
           forbid: [], // Liste vide = autorise ' et " sans restriction
         },
       ],
+      "@typescript-eslint/no-unused-vars": ["warn", { 
+        "argsIgnorePattern": "^_", 
+        "varsIgnorePattern": "^_" 
+      }],
     }
   }
 ];

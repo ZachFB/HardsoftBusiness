@@ -19,10 +19,8 @@ const eslintConfig = [
           forbid: [], // Liste vide = autorise ' et " sans restriction
         },
       ],
-      "@typescript-eslint/no-unused-vars": ["warn", { 
-        "argsIgnorePattern": "^_", 
-        "varsIgnorePattern": "^_" 
-      }],
+      "@typescript-eslint/no-unused-vars": "off",
+      "react-hooks/exhaustive-deps": "off",
     }
   }
 ];

@@ -23,7 +23,7 @@ const SliderSolu = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
     const sliderContainerRef = useRef<HTMLDivElement>(null);
-    const autoSlideTimerRef = useRef<NodeJS.Timeout>();
+    const autoSlideTimerRef = useRef<NodeJS.Timeout | null>(null);
     
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const updateSlider = (index: number) => {
@@ -95,6 +95,7 @@ const SliderSolu = () => {
                 clearInterval(autoSlideTimerRef.current);
             }
         };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

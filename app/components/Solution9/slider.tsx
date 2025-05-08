@@ -29,23 +29,21 @@ const CardSlider = () => {
     useEffect(() => {
         if (!sliderRef.current) return;
         
+        // Stocker la référence actuelle dans une variable locale
+        const sliderElement = sliderRef.current;
+        
         const updateHeight = () => {
-            if (sliderRef.current) {
-                setSliderHeight(sliderRef.current.clientHeight);
-            }
+            setSliderHeight(sliderElement.clientHeight);
         };
         
-        // Observer pour détecter les changements de taille
         const resizeObserver = new ResizeObserver(updateHeight);
-        resizeObserver.observe(sliderRef.current);
+        resizeObserver.observe(sliderElement);
         
-        // Mise à jour initiale
         updateHeight();
         
         return () => {
-            if (sliderRef.current) {
-                resizeObserver.unobserve(sliderRef.current);
-            }
+            // Utiliser la variable locale capturée
+            resizeObserver.unobserve(sliderElement);
         };
     }, []);
 

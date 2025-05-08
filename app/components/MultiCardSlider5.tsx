@@ -10,7 +10,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const MultiCardSlider5 = () => {
 
-  const [IAManag, setIAManag] = useState(
+  const [IAManag] = useState(
     [
       {
         title: "Optimisation des processus de fabrication",

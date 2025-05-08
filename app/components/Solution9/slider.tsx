@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 
 const CardSlider = () => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [sliderHeight, setSliderHeight] = useState(0);
     const sliderRef = useRef<HTMLDivElement>(null);
     const swiperRef = useRef<SwiperType | null>(null);

@@ -10,7 +10,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const MultiCardSlider6 = () => {
 
-  const [IAManag, setIAManag] = useState(
+  const [IAManag] = useState(
     [
       {
         title: "Développement de nouveaux produits",

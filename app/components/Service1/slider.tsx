@@ -25,6 +25,7 @@ const SliderServ = () => {
     const sliderContainerRef = useRef<HTMLDivElement>(null);
     const autoSlideTimerRef = useRef<NodeJS.Timeout>();
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const updateSlider = (index: number) => {
         if (!sliderContainerRef.current || isAnimating) return;
 

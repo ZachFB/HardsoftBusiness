@@ -1,4 +1,4 @@
-import Slider2 from '@/app/components/industrie3/slider'
+import Slider2 from '@/app/components/Industrie3/slider'
 import ListeIndu from '@/app/components/listeIndu'
 import Image from 'next/image'
 import React from 'react'

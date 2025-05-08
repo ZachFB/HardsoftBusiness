@@ -10,7 +10,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const MultiCardSlider7 = () => {
 
-  const [IAManag, setIAManag] = useState(
+  const [IAManag] = useState(
     [
       {
         title: "Gestion de l'énergie",

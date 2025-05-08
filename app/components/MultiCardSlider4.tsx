@@ -10,7 +10,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const MultiCardSlider4 = () => {
 
-  const [IAManag, setIAManag] = useState(
+  const [IAManag] = useState(
     [
       {
         title: "Prévision de la demande",

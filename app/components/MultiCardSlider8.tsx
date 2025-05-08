@@ -10,7 +10,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const MultiCardSlider8 = () => {
 
-  const [IAManag, setIAManag] = useState(
+  const [IAManag] = useState(
     [
       {
         title: "Détection d'intrusions",

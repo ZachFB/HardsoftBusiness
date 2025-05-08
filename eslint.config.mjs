@@ -19,9 +19,8 @@ const eslintConfig = [
           forbid: [], // Liste vide = autorise ' et " sans restriction
         },
       ],
-      '@typescript-eslint/no-unused-vars': ['error', { 
-        'varsIgnorePattern': 'slider|theme|setIAManag|updateSlider|sliderHeight'
-      }]
+      // "@typescript-eslint/no-unused-vars": "off",
+      // "react-hooks/exhaustive-deps": "off",
     }
   }
 ];

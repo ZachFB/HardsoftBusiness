@@ -119,10 +119,9 @@ const Slider2: React.FC = () => {
       }
     }
 
-    // Initialize slider
-    let slider: InfiniteSlider;
-    try {
-      slider = new InfiniteSlider();
+     // Initialize slider
+     try {
+      new InfiniteSlider();
     } catch (error) {
       console.error("Failed to initialize slider:", error);
     }

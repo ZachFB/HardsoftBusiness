@@ -30,7 +30,7 @@ const Slider2: React.FC = () => {
         this.autoSlideInterval = null;
         this.totalCards = this.elements.slider.children.length;
         this.currentIndex = this.totalCards;
-        
+
         this.init();
       }
 
@@ -102,7 +102,7 @@ const Slider2: React.FC = () => {
       private init(): void {
         this.cloneCards();
         this.updateSliderPosition(false);
-        
+
         this.elements.nextButton.addEventListener('click', () => {
           this.stopAutoSlide();
           this.slide('next');
@@ -120,9 +120,8 @@ const Slider2: React.FC = () => {
     }
 
     // Initialize slider
-    let slider: InfiniteSlider;
     try {
-      slider = new InfiniteSlider();
+      new InfiniteSlider();
     } catch (error) {
       console.error("Failed to initialize slider:", error);
     }
@@ -139,59 +138,59 @@ const Slider2: React.FC = () => {
 
   return (
     <div className="mt-[90px]">
-        <div className="flex w-full gap-10 md:gap-0 lg:gap-48">
-            <span className="lg:w-[890px] w-full h-auto text-[28px] lg:text-[38px] poppins-semibold ml-[20px] md:ml-[68px] font-black">
-                <span className="lg:text-[40px] text-[28px] text-transparent bg-clip-text bg-gradient-to-r from-[#0000FF] via-[#00FFFF] to-[#008000] font-bold text-4xl ml-2">
-                Flux de travail associés
-                </span>
-            </span>
-            <section className="flex md:gap-10 gap-4 justify-end">
-                <Image src="images/ArrowL.svg" id="prevBt" className="cursor-pointer" height={50} width={50} alt="Flèche gauche" />
-                <Image src="images/ArrowR.svg" id="nextBt" className="cursor-pointer" height={50} width={50} alt="Flèche droite" />
-            </section>
-        </div>
+      <div className="flex w-full gap-10 md:gap-0 lg:gap-48">
+        <span className="lg:w-[890px] w-full h-auto text-[28px] lg:text-[38px] poppins-semibold ml-[20px] md:ml-[68px] font-black">
+          <span className="lg:text-[40px] text-[28px] text-transparent bg-clip-text bg-gradient-to-r from-[#0000FF] via-[#00FFFF] to-[#008000] font-bold text-4xl ml-2">
+            Flux de travail associés
+          </span>
+        </span>
+        <section className="flex md:gap-10 gap-4 justify-end">
+          <Image src="images/ArrowL.svg" id="prevBt" className="cursor-pointer" height={50} width={50} alt="Flèche gauche" />
+          <Image src="images/ArrowR.svg" id="nextBt" className="cursor-pointer" height={50} width={50} alt="Flèche droite" />
+        </section>
+      </div>
 
-        {/* Slider */}
-        <div id="slider-container-2" className="overflow-hidden w-full h-[700px] mt-[25px] md:mt-[52px] border-b border-[#00000026]">
-            <div id="slider-2" className="flex transition-transform duration-500 gap-3">
-                {/* Cartes */}
-                <div className="card lg:min-w-[80%] min-w-[90%] mx-4 h-[597.69px] bg-contain bg-left bg-no-repeat border-[#00000026] border rounded-[25px] flex flex-col justify-center lg:items-end items-center"
-                    style={{ backgroundImage: `url("images/funColor3.svg")` }}>
-                    <div className="lg:w-1/2 w-[80%] lg:pr-16 lg:bg-transparent bg-[#a3f7ffd3] p-6 rounded-xl">
-                        <span className="block md:text-[28px] text-[16px] md:leading-[48px] leading-[24px] font-black mb-6">
-                        📈 Optimisation des chaînes de production
-                        </span>
-                        <p className="font-light text-[16px]">
-                        Nos agents IA surveillent et analysent en temps réel les processus de fabrication, identifiant les points d’amélioration pour maximiser la productivité.
-                        </p>
-                    </div>
-                </div>
-
-                <div className="card lg:min-w-[80%] min-w-[90%] mx-4 h-[597.69px] bg-contain bg-left bg-no-repeat border-[#00000026] border rounded-[25px] flex flex-col justify-center lg:items-end items-center"
-                    style={{ backgroundImage: `url("images/funColor4.png")` }}>
-                    <div className="lg:w-1/2 w-[80%] lg:pr-16 lg:bg-transparent bg-[#a3f7ffd3] p-6 rounded-xl">
-                        <span className="block md:text-[28px] text-[16px] md:leading-[48px] leading-[24px] font-black mb-6">
-                        🔍 Détection et correction des anomalies
-                        </span>
-                        <p className="font-light text-[16px]">
-                        Grâce à l’apprentissage automatique, nos solutions détectent les écarts de qualité et proposent des ajustements immédiats pour garantir un contrôle optimal.
-                        </p>
-                    </div>
-                </div>
-
-                <div className="card lg:min-w-[80%] min-w-[90%] mx-4 h-[597.69px] bg-contain bg-left bg-no-repeat border-[#00000026] border rounded-[25px] flex flex-col justify-center lg:items-end items-center"
-                    style={{ backgroundImage: `url("images/funColor5.png")` }}>
-                    <div className="lg:w-1/2 w-[80%] lg:pr-16 lg:bg-transparent bg-[#a3f7ffd3] p-6 rounded-xl">
-                        <span className="block md:text-[28px] text-[16px] md:leading-[48px] leading-[24px] font-black mb-6">
-                        📊 Gestion prédictive des stocks et ressources
-                        </span>
-                        <p className="font-light text-[16px]">
-                        L’IA anticipe les besoins en matières premières et optimise l’approvisionnement pour éviter les ruptures et les surplus inutiles.
-                        </p>
-                    </div>
-                </div>
+      {/* Slider */}
+      <div id="slider-container-2" className="overflow-hidden w-full h-[700px] mt-[25px] md:mt-[52px] border-b border-[#00000026]">
+        <div id="slider-2" className="flex transition-transform duration-500 gap-3">
+          {/* Cartes */}
+          <div className="card lg:min-w-[80%] min-w-[90%] mx-4 h-[597.69px] bg-contain bg-left bg-no-repeat border-[#00000026] border rounded-[25px] flex flex-col justify-center lg:items-end items-center"
+            style={{ backgroundImage: `url("images/funColor3.svg")` }}>
+            <div className="lg:w-1/2 w-[80%] lg:pr-16 lg:bg-transparent bg-[#a3f7ffd3] p-6 rounded-xl">
+              <span className="block md:text-[28px] text-[16px] md:leading-[48px] leading-[24px] font-black mb-6">
+                📈 Optimisation des chaînes de production
+              </span>
+              <p className="font-light text-[16px]">
+                Nos agents IA surveillent et analysent en temps réel les processus de fabrication, identifiant les points d’amélioration pour maximiser la productivité.
+              </p>
             </div>
+          </div>
+
+          <div className="card lg:min-w-[80%] min-w-[90%] mx-4 h-[597.69px] bg-contain bg-left bg-no-repeat border-[#00000026] border rounded-[25px] flex flex-col justify-center lg:items-end items-center"
+            style={{ backgroundImage: `url("images/funColor4.png")` }}>
+            <div className="lg:w-1/2 w-[80%] lg:pr-16 lg:bg-transparent bg-[#a3f7ffd3] p-6 rounded-xl">
+              <span className="block md:text-[28px] text-[16px] md:leading-[48px] leading-[24px] font-black mb-6">
+                🔍 Détection et correction des anomalies
+              </span>
+              <p className="font-light text-[16px]">
+                Grâce à l’apprentissage automatique, nos solutions détectent les écarts de qualité et proposent des ajustements immédiats pour garantir un contrôle optimal.
+              </p>
+            </div>
+          </div>
+
+          <div className="card lg:min-w-[80%] min-w-[90%] mx-4 h-[597.69px] bg-contain bg-left bg-no-repeat border-[#00000026] border rounded-[25px] flex flex-col justify-center lg:items-end items-center"
+            style={{ backgroundImage: `url("images/funColor5.png")` }}>
+            <div className="lg:w-1/2 w-[80%] lg:pr-16 lg:bg-transparent bg-[#a3f7ffd3] p-6 rounded-xl">
+              <span className="block md:text-[28px] text-[16px] md:leading-[48px] leading-[24px] font-black mb-6">
+                📊 Gestion prédictive des stocks et ressources
+              </span>
+              <p className="font-light text-[16px]">
+                L’IA anticipe les besoins en matières premières et optimise l’approvisionnement pour éviter les ruptures et les surplus inutiles.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   );
 };

@@ -20,38 +20,45 @@ const SliderServ = () => {
         },
     ];
 
-    const autoSlideTimer = useRef(null);
-
-    useEffect(() => {
-        const autoSlide = () => {
-            autoSlideTimer.current = setInterval(() => {
-                setIsAnimating(true);
-                setTimeout(() => {
-                    setCurrentSlide(prev => (prev + 1) % sliderContent.length);
-                    setIsAnimating(false);
-                }, 500);
-            }, 9000);
-        };
-
-        autoSlide();
-        return () => clearInterval(autoSlideTimer.current);
-    }, [sliderContent.length]);
-
-    const updateSlider = (index) => {
-        setIsAnimating(true);
-        setTimeout(() => {
-            setCurrentSlide(index);
-            setIsAnimating(false);
-            clearInterval(autoSlideTimer.current);
-            autoSlideTimer.current = setInterval(() => {
-                setIsAnimating(true);
-                setTimeout(() => {
-                    setCurrentSlide(prev => (prev + 1) % sliderContent.length);
-                    setIsAnimating(false);
-                }, 500);
-            }, 9000);
-        }, 500);
-    };
+   const autoSlideTimer = useRef<NodeJS.Timeout | null>(null);
+  
+      useEffect(() => {
+          const autoSlide = () => {
+              autoSlideTimer.current = setInterval(() => {
+                  setIsAnimating(true); // Déclenche l'animation
+                  setTimeout(() => {
+                      setCurrentSlide(prev => (prev + 1) % sliderContent.length);
+                      setIsAnimating(false); // Termine l'animation
+                  }, 500); // Durée de l'animation
+              }, 9000);
+          };
+      
+          autoSlide();
+          return () => {
+              if (autoSlideTimer.current) {
+                  clearInterval(autoSlideTimer.current);
+              }
+          };
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, []);
+      
+      const updateSlider = (index:number) => {
+          setIsAnimating(true); // Déclenche l'animation
+          setTimeout(() => {
+              setCurrentSlide(index);
+              setIsAnimating(false); // Termine l'animation
+              if (autoSlideTimer.current) {
+                  clearInterval(autoSlideTimer.current);
+              }
+              autoSlideTimer.current = setInterval(() => {
+                  setIsAnimating(true);
+                  setTimeout(() => {
+                      setCurrentSlide(prev => (prev + 1) % sliderContent.length);
+                      setIsAnimating(false);
+                  }, 500);
+              }, 9000);
+          }, 500); // Durée de l'animation
+      };
 
     return (
         <div>

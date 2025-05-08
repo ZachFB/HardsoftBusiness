@@ -20,7 +20,7 @@ const SliderServ = () => {
         },
     ];
 
-    const autoSlideTimer = useRef(null);
+    const autoSlideTimer = useRef<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
         const autoSlide = () => {
@@ -32,17 +32,24 @@ const SliderServ = () => {
                 }, 500); // Durée de l'animation
             }, 9000);
         };
-
+    
         autoSlide();
-        return () => clearInterval(autoSlideTimer.current);
+        return () => {
+            if (autoSlideTimer.current) {
+                clearInterval(autoSlideTimer.current);
+            }
+        };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-
-    const updateSlider = (index) => {
+    
+    const updateSlider = (index:number) => {
         setIsAnimating(true); // Déclenche l'animation
         setTimeout(() => {
             setCurrentSlide(index);
             setIsAnimating(false); // Termine l'animation
-            clearInterval(autoSlideTimer.current);
+            if (autoSlideTimer.current) {
+                clearInterval(autoSlideTimer.current);
+            }
             autoSlideTimer.current = setInterval(() => {
                 setIsAnimating(true);
                 setTimeout(() => {

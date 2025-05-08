@@ -20,7 +20,7 @@ const Slider = () => {
         let currentIndex = totalCards; // Index initial (après les clones ajoutés)
 
         let isTransitioning = false; // Empêche les clics multiples pendant une transition
-        let autoSlideInterval: number | null; // Intervalle pour le défilement automatique
+        let autoSlideInterval: NodeJS.Timeout | null = null;// Intervalle pour le défilement automatique
 
         // Clonage des cartes pour un effet infini
         const cards = Array.from(slider.children) as HTMLElement[];

@@ -7,20 +7,17 @@ const Slider = () => {
         const slider = document.getElementById("slider") as HTMLElement | null;
         const prevBtn = document.getElementById("prevBtn") as HTMLElement | null;
         const nextBtn = document.getElementById("nextBtn") as HTMLElement | null;
-
-        if (!slider || !prevBtn || !nextBtn) {
-            console.error("Impossible de trouver l'un des éléments slider, prevBtn ou nextBtn.");
-            return;
-        }
-
-        const cardWidth = window.innerWidth < 768 ? window.innerWidth - 40 : 380; // Largeur d'une carte
-        const gap = 20; // Espacement entre les cartes
-        const slideWidth = cardWidth + gap; // Largeur totale utilisée
-        const totalCards = 6; // Nombre de cartes originales
-        let currentIndex = totalCards; // Index initial (après les clones ajoutés)
-
-        let isTransitioning = false; // Empêche les clics multiples pendant une transition
-        let autoSlideInterval: number | null; // Intervalle pour le défilement automatique
+    
+        if (!slider || !prevBtn || !nextBtn) return;
+    
+        const cardWidth = window.innerWidth < 768 ? window.innerWidth - 40 : 380;
+        const gap = 20;
+        const slideWidth = cardWidth + gap;
+        const totalCards = 6;
+        let currentIndex = totalCards;
+    
+        let isTransitioning = false;
+        let autoSlideInterval: NodeJS.Timeout | null = null;
 
         // Clonage des cartes pour un effet infini
         const cards = Array.from(slider.children) as HTMLElement[];

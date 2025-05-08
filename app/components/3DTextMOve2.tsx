@@ -7,7 +7,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
 
 export default function Text3DAnimation2() {
-  const textRef = useRef(null); // Référence pour le conteneur du synonyme
+  const textRef = useRef<HTMLSpanElement>(null); // Référence pour le conteneur du synonyme
   const leftTextRef = useRef(null); // Référence pour le texte à gauche ("Administration")
   const rightTextRef = useRef(null); // Référence pour le texte à droite ("- Legal & Finance")
   const [currentWord, setCurrentWord] = useState("Recruting"); // État pour le mot actuel
@@ -25,8 +25,11 @@ export default function Text3DAnimation2() {
     let currentIndex = 0;
 
     const changeWord = () => {
+      // Vérifier si textRef.current existe avant d'y accéder
+      if (!textRef.current) return; // Cette ligne ajoute une protection
+
       const nextWord = synonyms[currentIndex].word;
-      const currentWidth = textRef.current.offsetWidth; // Largeur actuelle du synonyme
+      const currentWidth = textRef.current.offsetWidth; // Maintenant c'est sécurisé
       const nextWidth = nextWord.length * 10; // Estimation de la largeur du prochain synonyme
 
       // Déterminer la direction du déplacement

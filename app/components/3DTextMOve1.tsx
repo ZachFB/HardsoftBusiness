@@ -7,26 +7,29 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
 
 export default function Text3DAnimation() {
-  const textRef = useRef(null); // Référence pour le conteneur du synonyme
+  const textRef = useRef<HTMLSpanElement>(null); // Référence pour le conteneur du synonyme
   const leftTextRef = useRef(null); // Référence pour le texte à gauche ("Administration")
   const rightTextRef = useRef(null); // Référence pour le texte à droite ("- Legal & Finance")
   const [currentWord, setCurrentWord] = useState("Recruting"); // État pour le mot actuel
 
   // Tableau des synonymes avec leurs classes de couleur Tailwind
   const synonyms = [
-    { word: "Hiring"},
-    { word: "Recruitment"},
-    { word: "Staffing"},
-    { word: "Employing"},
-    { word: "Engagement"},
+    { word: "Hiring" },
+    { word: "Recruitment" },
+    { word: "Staffing" },
+    { word: "Employing" },
+    { word: "Engagement" },
   ];
 
   useGSAP(() => {
     let currentIndex = 0;
 
     const changeWord = () => {
+      // Vérifier si textRef.current existe avant d'y accéder
+      if (!textRef.current) return; // Cette ligne ajoute une protection
+
       const nextWord = synonyms[currentIndex].word;
-      const currentWidth = textRef.current.offsetWidth; // Largeur actuelle du synonyme
+      const currentWidth = textRef.current.offsetWidth; // Maintenant c'est sécurisé
       const nextWidth = nextWord.length * 10; // Estimation de la largeur du prochain synonyme
 
       // Déterminer la direction du déplacement
@@ -38,8 +41,8 @@ export default function Text3DAnimation() {
         duration: 0.3,
         ease: "power2.inOut",
         onComplete: () => {
-           // Animation pour revenir à la position d'origine
-           gsap.to([rightTextRef.current, textRef.current], {
+          // Animation pour revenir à la position d'origine
+          gsap.to([rightTextRef.current, textRef.current], {
             x: 0,
             duration: 0.5,
             ease: "power2.inOut",
@@ -51,7 +54,7 @@ export default function Text3DAnimation() {
         duration: 0.5,
         ease: "power2.inOut",
         opacity: 0,
-       
+
         onComplete: () => {
           // Changer le mot après le déplacement
           setCurrentWord(nextWord);
